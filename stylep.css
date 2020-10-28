@@ -1,0 +1,322 @@
+.text {color: rgb(14, 151, 151);
+    font-family: Palatino, URW Palladio L, serif;
+       position: absolute;
+       left: 20%;
+       top: 25%;
+       z-index: 2;
+       font-weight: bolder;
+       font-size: 220%;
+       
+
+    }
+.naslovna {
+    
+       height: 12cm;
+       width: 11cm;
+       position: absolute;
+       left: 60%;
+       top: 15%;
+       z-index: 1;
+} 
+.dropdown-content a:hover {
+    background-color: #ddd;
+  
+  }
+  
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+     height: 3cm;
+    
+  }
+  .dropdown .dropbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color:grey;
+    background-color:  rgb(61, 60, 60);
+    
+  }
+  .dropdown-content a {
+    float: none;
+    color: black;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    height:1cm;
+  }
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+.text2{
+    color: rgb(61, 60, 60);
+    font-family: Palatino, URW Palladio L, serif;
+    position: absolute;
+    left: 8%;
+    top: 38%;
+    z-index: 3;
+    font-weight: bolder;
+    font-size: 130%;
+    width: 63%;
+    text-align: center;
+
+}
+div.home {
+ background-color:  rgb(61, 60, 60);
+ height: 3cm;
+ text-emphasis-position: bottom;
+ z-index: 1;
+
+ 
+}
+p{
+    width:65%;
+}
+.menu a{
+
+       font-weight: bold;
+       text-decoration: none;
+       font-size: 20px;
+       font-weight: lighter;
+       color:grey;
+       padding-left: 1%;
+       
+       
+       
+   }
+div.menu
+{
+    position: relative;
+    left:25%;
+    top:55%;
+    width:10cm;
+    
+}   
+.contact{
+    height: 2cm;
+    width:2cm;
+    border-radius: 2cm;
+}
+
+h1 {
+    color: rgb(14, 151, 151);
+    font: bolder;
+    font-family:Palatino, URW Palladio L, serif;
+    position: absolute;
+    top: 7%;
+    left: 1.5cm;
+    font-size: 200%;
+    text-shadow: grey;
+
+    }
+ div a:hover{
+     color: rgb(14, 170, 170);
+     text-decoration: underline;
+     
+ }  
+ div.favourites{
+     background-color:rgb(77, 76, 76);
+     height: 32.5cm;
+     position: relative;
+     top:13cm;
+     
+     
+ }
+ hr.leva {color: rgb(170, 170, 170); width: 10cm; position: relative; top:1cm; height: 0.000001cm;right: 10cm;}
+ hr.desna {color: rgb(170, 170, 170); width: 10cm; position: relative; top:0.7cm; height: 0.000001cm;left: 10cm;}
+ h1.nadlin{
+     color:  rgb(14, 151, 151);
+     position: relative;
+     top: -0.4cm;
+     left:15cm;
+     font-family:Palatino, URW Palladio L, serif ;
+     text-decoration: double;
+     
+ }
+ .slikite {
+    
+    margin-left:2cm; width: 12cm; 
+    height: 8cm;
+}
+.text3{
+    left:22cm;top:3cm; text-shadow: whitesmoke; font-family:'Times New Roman', Times, serif;
+}
+div.blok
+{
+    height: 10cm;
+}
+.text4{
+    width: 17cm;
+    position: relative;
+    color: white;
+    font-family: Palatino, URW Palladio L, serif;
+
+}
+p.mftext{
+    color: rgb(14, 151, 151);
+    text-shadow: whitesmoke; 
+    font-weight: bolder;
+    position: relative;
+    font-size: 220%;
+    margin-left: 2cm; 
+    top:-8.3cm;
+    font-family:'Times New Roman', Times, serif;
+    width:8cm;
+
+}
+p.mf{
+    
+    font-family: Palatino, URW Palladio L, serif;
+    position: relative;
+    font-weight: bolder;
+    font-size: 130%;
+    top:-7.5cm;
+    width:750px;
+    color: white;
+    margin-left: 15cm;
+    text-align: center;
+    width:20cm;
+
+}
+div.insta{
+    position: relative;
+    height:13cm;
+    top:13cm;
+    background-color:rgba(219, 213, 213, 0.753);
+    text-decoration-color:black;
+}
+p.a{
+       color:black;
+       padding-left: 1%;
+       width:5cm;
+       
+}
+.button1 {border-radius: 2px;
+        background-color: pink;
+        position: relative;
+        font-weight: bolder;
+        position: relative;
+        margin-left: 1cm;
+    }
+ h2{
+     color: black;
+     font-weight: bolder;
+     font-size: 200%;
+     text-align: center;
+     text-shadow:-4px,4px,6px,grey;
+     -webkit-text-stroke: gray;
+ } 
+nav {background-color: black;width:23cm; text-align: center;font-size: 250%; color: white;}
+nav ul {display: none;}
+nav:hover ul {display: block; height: 3cm;overflow: scroll; font-size: 70%;}
+nav:hover{color: rgb(161, 154, 154); background-color: black;}
+li {color: white; background-color:black;}
+li a{color:white; font-size: 70%;}
+li:hover {color: rgb(10, 119, 119); background-color:grey;}
+nav ul li nav{ font-size: 110%;color: white;}
+nav ul li nav ul{display: none;}
+nav ul li nav:hover ul{display: block;}
+.homedr{
+    background-color:  rgb(61, 60, 60);
+    height: 3cm;
+    text-emphasis-position: bottom;
+    z-index: 1;
+    position: static;
+
+}
+.anketa{
+    font-size: large;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+}
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+  input[type=text]:focus {
+    background-color: lightgrey;
+  }
+  textarea {
+    width: 100%;
+    height: 150px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid black;
+    border-radius: 4px;
+    background-color:white;
+    resize: none;
+  }
+.anketaprozor {
+    padding-left: 25%;
+    padding-right: 25%;
+    padding-bottom: 30px;
+}
+
+.forma {
+    box-shadow: -4px 4px 10px 10px gray;
+    border-radius: 0.7cm;
+    width: auto;
+    background-color: white;
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-top: 10px;
+    overflow: hidden;
+}
+th{
+    padding-left: 1cm;
+    font-size: 180%;
+}
+details
+{
+    position: relative;
+     top:-7cm;
+    left:12.3cm;
+     width:11cm ;
+     height:0.8cm;
+     border-radius:2cm;background-color:  white;
+      border-color: black;
+      color: black; 
+      z-index: 1;
+}
+.movies
+{
+    background-color: black;
+    text-align: center;
+    padding: 1cm;
+    color:teal;
+    font-size: xx-large;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+ul.horizontal {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    text-decoration: none;
+  }
+  
+ ul.horizontal li {
+    float: left;
+    padding: 0.3cm;
+    text-decoration: none;
+  }
+  
+  ul.horizontal:hover li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+ ul.horizontal li a:hover {
+    background-color: #111;
+  }
