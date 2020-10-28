@@ -29,6 +29,10 @@
      height: 3cm;
     
   }
+  .dropdown .dropbtn:hover {
+      text-decoration: underline;
+      color: rgb(14, 151, 151);
+  }
   .dropdown .dropbtn {
     font-size: 16px;
     border: none;
@@ -233,7 +237,8 @@ nav ul li nav:hover ul{display: block;}
     font-size: large;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: bold;
-}
+    width: 120%;
+    }
 input[type=text] {
     width: 100%;
     padding: 12px 20px;
