@@ -11,8 +11,8 @@
     }
 .naslovna {
     
-       height: 12cm;
-       width: 11cm;
+       height: 75%;
+       width: 30%;
        position: absolute;
        left: 60%;
        top: 15%;
@@ -26,9 +26,8 @@
   
   .dropdown:hover .dropdown-content {
     display: block;
-     height: 2.5cm;
-     position: relative;
-    left:12%;
+    height: 2.5cm;
+   
     
   }
   .dropdown .dropbtn:hover {
@@ -36,22 +35,23 @@
       color: rgb(14, 151, 151);
   }
   .dropdown .dropbtn {
-    font-size: 16px;
     border: none;
     outline: none;
     color:grey;
     background-color:  rgb(61, 60, 60);
-    position: relative;
-    left:12%;
+    font-size: 20%;
+    
+    
     
   }
+
   .dropdown-content a {
     float: none;
     color: black;
     text-decoration: none;
     display: block;
     text-align: left;
-    height:1cm;
+    
   }
   .dropdown-content {
     display: none;
@@ -79,6 +79,7 @@ div.home {
  height: 3cm;
  text-emphasis-position: bottom;
  z-index: 1;
+ overflow: hidden;
 
  
 }
@@ -102,7 +103,7 @@ p{
        
        
        
-   }
+}
 div.menu
 {
     position: relative;
@@ -136,8 +137,8 @@ h1 {
  div.favourites{
      background-color:rgb(77, 76, 76);
      height: 32.5cm;
-     position: relative;
-     top:13cm;
+     
+     
      
      
  }
@@ -154,7 +155,8 @@ h1 {
  }
  .slikite {
     
-    margin-left:2cm; width: 12cm; 
+    margin-left:2cm; 
+    width: 12cm; 
     height: 8cm;
 }
 .text3{
@@ -163,6 +165,26 @@ h1 {
 div.blok
 {
     height: 10cm;
+    overflow: hidden;
+}
+
+meter {
+  height:10%;
+  width: 30%;
+  margin-left: 15%;
+  margin-right: 10%;
+
+}
+meter::-webkit-meter-bar {
+    background: #FFF;
+    border: 1px solid #CCC;
+}
+meter::-webkit-meter-optimum-value {
+    background: teal;
+   
+}
+audio{
+    margin-left: 20%;
 }
 .text4{
     width: 17cm;
@@ -198,9 +220,8 @@ p.mf{
 
 }
 div.insta{
-    position: relative;
-    height:13cm;
-    top:13cm;
+   overflow: hidden;
+    height:30%;
     background-color:rgba(219, 213, 213, 0.753);
     text-decoration-color:black;
 }

@@ -8,98 +8,95 @@
 </head>
 <body style="font-size: large;">
     <div class="home">
-        <h1 class="try" style="margin-top: 0.55cm; left: 3.5%; font-size: 180%;">Mihaela's Journey</h1>
+        <h1 class="try">Mihaela's Journey</h1>
         <div class="menu"> 
             <a  href="personalblog.html">Home</a>
             <a  href="insta.html">Instagram</a>
             <a  href="blog.html">Blog</a>
             <a  href="#Contact" >Contact</a>
-            <div class="dropdown" style="position: relative;top:-0.55cm;left:7.2cm">
-                <button class="dropbtn">Favourites
-                  <i class="fa fa-caret-down"></i>
-                </button>
+            <div class="dropdown" style="position: relative;top:-0.55cm;left:8.4cm">
+                <button class="dropbtn">
+                    <a href="personalblog.html#favourite" style="font-size: large; border: none;">Favourites</a>
+                
                 <div class="dropdown-content">
                   <a href="music.html">Music</a>
                   <a href="food.html">Food</a>
                   <a href="movies.html">Movies</a>
-               </div>
+                </div>
+                </button>
             </div>
         </div>
-   </div>
+
+    </div>
    <section style="padding-left: 2%; padding-right: 2%;  margin-top: 2%;">
-   <form method="post" action="personalblog.html" autocomplete="on" class="forma" >
-   <section class="anketaprozor">
-    <p class="anketa" style="background-color: white;">Your name:* <br>
-        <input required type="text" name="name" placeholder="Name" autofocus autocomplete="anonymous" required>
-    </p>
-    <p class="anketa" style="background-color: white;">Your Last name:*<br>
-        <input required type="text" name="name" placeholder="Last Name" autofocus autocomplete="anonymous" required>
-    </p>
-    <p class="anketa" style="background-color: white;">
-        <label>Your comment:<br>
-            <textarea rows="10" cols="30"  name="name" type="text" size="35" placeholder="Comment here:"></textarea>       </label>
+     <form method="post" action="personalblog.html" autocomplete="on" class="forma" >
+       <section class="anketaprozor">
+         <p class="anketa" style="background-color: white;">Your name:* <br>
+            <input required type="text" name="name" placeholder="Name" autofocus autocomplete="anonymous" required>
+         </p>
+         <p class="anketa" style="background-color: white;">Your Last name:*<br>
+            <input required type="text" name="name" placeholder="Last Name" autofocus autocomplete="anonymous" required>
+         </p>
+         <p class="anketa" style="background-color: white;">
+            <label>Your comment:<br>
+                <textarea rows="10" cols="30"  name="name" type="text" size="35" placeholder="Comment here:"></textarea>       </label>
 
-    </p>
-    <p class="anketa" style="background-color: white;">
-        Things you liked:<br>
-        Favourite items<input style="padding-left: 1cm; font-weight: normal;" type="checkbox" name="Things you liked">
-        Blog<input style="padding-left: 1cm; font-weight: normal" type="checkbox" name="Things you liked">
-        Instagram<input style="padding-left: 1cm; font-weight: normal" type="checkbox" name="Things you liked">
+         </p>
+         <p class="anketa" style="background-color: white;">
+            Things you liked:<br>
+            Favourite items<input style="padding-left: 1cm; font-weight: normal;" type="checkbox" name="Things you liked">
+             Blog<input style="padding-left: 1cm; font-weight: normal" type="checkbox" name="Things you liked">
+             Instagram<input style="padding-left: 1cm; font-weight: normal" type="checkbox" name="Things you liked">
 
-    </p>
-    <p class="anketa" style="background-color: white;">
-        How often do you visit this site?<br>
-        <input type="text" name="posledno" list="posledno" placeholder="Posledno">
-        <datalist id="posledno">
-            <option value="Once a day"></option>
-            <option value="Once a week"></option>
-            <option value="Once a month"></option>
-            <option value="It's my first time"></option>
-        </datalist>
-    </p>
-    <p class="anketa" style="background-color: white;">
-        Rate this site: <input type="number" max=10 min=1 step="=1">(1-10)
-    </p>
-    <p class="anketa" style="background-color: white;">
-        Telephone number: <br> <input type="tel" pattern="\d{3} +\d{3} +\d{3}" placeholder="(###) ###-###">
-    </p>
-    <p class="anketa" style="background-color: white;">
-        What did you like the most in the blog?<br>
-        Fahion<input type="radio" name="blog" checked>
-        Travel<input type="radio" name="blog">
-        Sport<input type="radio" name="blog">
-    </p>
-    <p class="anketa" style="background-color: white;">Rate your favourite category in the blog: <br>0
-        <input name="blog" type="range" min="1" max="10" step="1" value=""> 10
-    </p>
-    <p class="anketa" style="background-color: white;">
+         </p>
+         <p class="anketa" style="background-color: white;">
+            How often do you visit this site?<br>
+            <input type="text" name="posledno" list="posledno" placeholder="Posledno">
+            <datalist id="posledno">
+                <option value="Once a day"></option>
+                <option value="Once a week"></option>
+                <option value="Once a month"></option>
+                <option value="It's my first time"></option>
+            </datalist>
+         </p>
+         <p class="anketa" style="background-color: white;">
+            Rate this site: <input type="number" max=10 min=1 step="=1">(1-10)
+         </p>
+         <p class="anketa" style="background-color: white;">
+            Telephone number: <br> <input type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}" placeholder="###-###-###">
+         </p>
+         <p class="anketa" style="background-color: white;">
+             What did you like the most in the blog?<br>
+             Fahion<input type="radio" name="blog" checked>
+             Travel<input type="radio" name="blog">
+             Sport<input type="radio" name="blog">
+         </p>
+         <p class="anketa" style="background-color: white;">Rate your favourite category in the blog: <br>0
+            <input name="blog" type="range" min="1" max="10" step="1" value=""> 10
+         </p>
+         <p class="anketa" style="background-color: white;">
         
             Date:<br>
-            <input type="datetime-local" required>
+            <input type="datetime-local">
             <section>
                 <input name="Submit" type="submit" href="personalblog.html" >
                 <input name="Clear" type="reset">
             </section>
-  </p>
-        
-    </p>
-
-
-   </section>
-   </form> </section>
-   <div id="Contact" style="background-color: black;height:5cm; position: relative; top:1cm" class="insta">
-    <div>
-        <a href="tel:076111111" style="color: white;font-size: 150%; position: relative; top:1.5cm;left:2cm">Contact: (+389 76 111 111)</a>
-    </div>
-    <div>
-    <a style="float: right;" href="https://www.facebook.com/mihaela.blazeska.7" ><img class="contact" src="fb.jpg" alt="fb"></a>
-    <a style="float: right; margin-right: 1cm;" href="https://www.instagram.com/mihaelablazeska/?hl=en" ><img class="contact" src="insta.jpg" alt="fb"></a>
-    <p style="float: right; color:white ;padding:0.2cm;font-size: 150%; position: relative; text-align: right;">Social networks:</p>
-    
-    </div>
+         </p>
+        </section>
+      </form>
+     </section>
+   <div id="Contact" style="background-color: black;height:5cm;" class="insta">
+        <div>
+            <a href="tel:076111111" style="color: white;font-size: 150%; position: relative; top:1.5cm;left:2cm">Contact: (+389 76 111 111)</a>
+        </div>
+        <div>
+            <a style="float: right;" href="https://www.facebook.com/mihaela.blazeska.7" ><img class="contact" src="fb.jpg" alt="fb"></a>
+            <a style="float: right; margin-right: 1cm;" href="https://www.instagram.com/mihaelablazeska/?hl=en" ><img class="contact" src="insta.jpg" alt="fb"></a>
+            <p style="float: right; color:white ;padding:0.2cm;font-size: 150%; position: relative; text-align: right;">Social networks:</p>
+        </div>
 
     </div>
-</div>
 
 </body>
 </html>
