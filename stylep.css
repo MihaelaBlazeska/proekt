@@ -26,7 +26,9 @@
   
   .dropdown:hover .dropdown-content {
     display: block;
-     height: 3cm;
+     height: 2.5cm;
+     position: relative;
+    left:12%;
     
   }
   .dropdown .dropbtn:hover {
@@ -39,6 +41,8 @@
     outline: none;
     color:grey;
     background-color:  rgb(61, 60, 60);
+    position: relative;
+    left:12%;
     
   }
   .dropdown-content a {
@@ -88,7 +92,13 @@ p{
        font-size: 20px;
        font-weight: lighter;
        color:grey;
-       padding-left: 1%;
+       padding: 2%;
+       border-style: solid;
+       border-left: grey;
+       border-top: none;
+       border-bottom: none;
+       border-width: 0.00001cm;
+       
        
        
        
@@ -96,9 +106,9 @@ p{
 div.menu
 {
     position: relative;
-    left:25%;
-    top:55%;
-    width:10cm;
+    top:7%;
+    width:30%;
+    
     
 }   
 .contact{
@@ -238,6 +248,7 @@ nav ul li nav:hover ul{display: block;}
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: bold;
     width: 120%;
+    background-color: rgba(128, 128, 128, 0.644);
     }
 input[type=text] {
     width: 100%;
@@ -270,26 +281,25 @@ input[type=text] {
     border-radius: 0.7cm;
     width: auto;
     background-color: white;
-    padding-left: 20%;
-    padding-right: 20%;
+    padding: 20%;
     padding-top: 10px;
     overflow: hidden;
 }
 th{
-    padding-left: 1cm;
+    padding: 10%;
     font-size: 180%;
 }
+
 details
 {
-    position: relative;
-     top:-7cm;
-    left:12.3cm;
-     width:11cm ;
-     height:0.8cm;
-     border-radius:2cm;background-color:  white;
-      border-color: black;
-      color: black; 
-      z-index: 1;
+
+    font-size: large;
+    background-color:  grey;
+    border-color:grey;
+    color: black ;
+    width: 10cm;
+    
+
 }
 .movies
 {
@@ -305,7 +315,7 @@ ul.horizontal {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #333;
+    background-color: grey;
     text-decoration: none;
   }
   
@@ -325,3 +335,4 @@ ul.horizontal {
  ul.horizontal li a:hover {
     background-color: #111;
   }
+  
