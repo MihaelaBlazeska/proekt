@@ -4,6 +4,47 @@
         <meta charset="utf-8">
         <title>Instagram</title>
         <link rel="stylesheet" type="text/css" href="stylep.css">
+        <script src="javascript.js"></script>
+        <script type="text/javascript">
+            var count = 0;
+            function funk(kade){
+             var displayCount = document.getElementById(kade);
+             count++;
+             displayCount.innerHTML = count;}
+        </script>
+        <script type="text/javascript">
+            function comment(kade,text,ime) {
+              var x = document.getElementById(text).value;
+              var y = document.getElementById(ime).value;
+              var content="<li>"+y+": "+x+"</li>";
+              document.getElementById(kade).innerHTML = content;
+            }
+        </script> 
+        <script>
+            var loadFile = function(event) {
+                var content="<p><img id='output' style='height:8cm ; width:5cm ; padding:10%; margin-left:0%;'></p><div style='width: 8cm;margin-left: 0%;'>"+
+                            "<button type='button' style='width: 1.5cm;height: 1.5cm;' class='contact' onclick='funk('like3')'>"+
+                            " <img src='blacklike.png' style='width: 1cm;height: 1cm;' alt='like'> </button>"+
+                            "<span id='like3'>0</span>"+"</div>"+
+                       "<details style='width: 8cm;margin-left: 0%; padding: 0%;'>"+
+                            "<summary style='width: 8cm;'>All comments:</summary>"+
+                           "<ul><div id='tri'></div> </ul></details>"+ 
+                         
+                        "<div>"+
+                           " <input id='ime3' style='height:0.35cm;width:4cm;float: left;'required type='text' name='name' placeholder='Name:' autocomplete='anonymous'>"+
+                           " <input id='kom3' style='height:0.5cm;width:8cm;float: left;'required type='text' name='name' placeholder='Comment:' autocomplete='anonymous'>"+
+                            "<button class='instabtn' style='float: left; overflow: hidden;''  type='button' onclick='comment('tret','kom3','ime3')'>Post</button> "+ 
+                  
+                        "</div>"
+                document.getElementById('output2').innerHTML=content;
+                var image = document.getElementById('output');
+                image.src = URL.createObjectURL(event.target.files[0]);
+
+                 };
+         </script>
+      
+
+        
 
     </head>
     <body>
@@ -26,6 +67,7 @@
                     </button>
                 </div>
             </div>
+            <div id="clock" style="float: right; color: grey; font-weight: bolder;text-align: center; font-size: 120%;"></div>
        </div>
         <div style="margin-top: 1cm;">
             <a href=insta.html><img src="profile.jpg" alt="profile_picture" style="border-radius: 5cm; margin-left: 3.5cm; width:8.5cm; height: 9cm;"></a>
@@ -46,54 +88,69 @@
                  </tbody>
             </table>
         </div>
-        
+       
 
     
         <hr>
         <hr class="desna" style="top:-5.5cm ;left:5.5cm;color:black">
         <div>
+            <p><input type="file"  accept="image/*" name="image" id="file"  onchange="loadFile(event)" style="display: none;"></p>
+            <p ><label for="file" style="margin-left:2cm;margin-top:2cm;cursor: pointer; background-color: teal; font-size: 200%; padding:10px;font-weight: bolder; color: white; border-radius: 8px;">+ New Post</label></p>
+            
+        </div> 
             <table style="margin-left: 0%;">
                 <thead>
-                     <th class="forma" style="overflow: hidden;height:12cm;width:12cm; box-shadow: black;padding:5%" >
+                     <th class="forma" style="height:12cm;width:12cm; box-shadow: black;padding:5%; " >
                         <img src="bday.jpg" alt="profilna" style="height: 8cm; width: 5cm;padding: 0%;margin-left: 0%;">
-                        <p style="font-weight: bolder; color: black; font-size:60%; ">
-                             My birthday party!
-                        </p>
-                        <details style="width: 8cm;margin-left: 0%; padding: 0%;">
-                            <summary style="width: 8cm;">All comments:</summary>
+                        <div style="width: 8cm;margin-left: 0%;">
+                           <button type="button" style="width: 1.5cm;height: 1.5cm;" class="contact" onclick="funk('like1')">
+                            <img src="blacklike.png" style="width: 1cm;height: 1cm;" alt="like">
+                           </button>
+                           <span id="like1">0</span>
+                        </div>
+                        <details style=" width: 8cm;margin-left: 0%; padding: 0%;overflow: hidden;align-content: center;">
+                            <summary style="width: 8cm; overflow: hidden;">All comments:</summary>
                             <ul>
                                 <li>Ana Ankovska: Happpy birthday!!!</li>
                                 <li>Kiro Krstevski: Be happiest!</li>
                                 <li>Gordana Gocevska:Wish you all the best</li>
+                                <li id="prv"></li>
     
                             </ul>
                        
                          </details>
                         <div>
-                            <input style="height:1cm;width:8cm"required type="text" name="name" placeholder="Comment:" autocomplete="anonymous">
-                            <input name="Submit" type="submit" href="insta.html" style=" margin-bottom: 10%;">  
-                   
-                        </div>
+                           <input id="ime1" style="height:0.35cm;width:4cm;float: left;"required type="text" name="name" placeholder="Name:" autocomplete="anonymous">
+                           <input id="kom1" style="height:0.5cm;width:8cm;float: left;"required type="text" name="name" placeholder="Comment:" autocomplete="anonymous">
+                           <button class="instabtn" style="float: left; overflow: hidden;"  type="button" onclick="comment('prv','kom1','ime1')">Post</button>  
+                 
+                       </div>
+                    
                 
                 
                     </th>
                     <th class="forma" style="overflow: hidden;height:12cm;width:12cm; box-shadow: black; padding:5%" >
                         <img src="kayaking.jpg" alt="profilna" style="height: 8cm; width: 5cm;padding: 0%;margin-left: 0%;">
-                        <p style="font-weight: bolder; color: black; font-size:60%; ">
-                            Missing summer
-                        </p>
+                        <div style="width: 8cm;margin-left: 0%;">
+                            <button type="button" style="width: 1.5cm;height: 1.5cm;" class="contact" onclick="funk('like2')">
+                             <img src="blacklike.png" style="width: 1cm;height: 1cm;" alt="like">
+                            </button>
+                            <span id="like2">0</span>
+                         </div>
                         <details style="width: 8cm;margin-left: 0%; padding: 0%;">
                             <summary style="width: 8cm;">All comments:</summary>
                              <ul>
                                 <li>Ana Ankovska: Me too!</li>
                                 <li>Kiro Krstevski: The best photographer is me</li>
+                                <div id="vtor"></div>
    
                             </ul>
                       
                         </details>
-                         <div>
-                            <input style="height:1cm;width:8cm"required type="text" name="name" placeholder="Comment:" autocomplete="anonymous">
-                            <input name="Submit" type="submit" href="insta.html" style=" margin-bottom: 10%;">  
+                        <div>
+                            <input id="ime2" style="height:0.35cm;width:4cm;float: left;"required type="text" name="name" placeholder="Name:" autocomplete="anonymous">
+                            <input id="kom2" style="height:0.5cm;width:8cm;float: left;"required type="text" name="name" placeholder="Comment:" autocomplete="anonymous">
+                            <button class="instabtn" style="float: left; overflow: hidden;"  type="button" onclick="comment('vtor','kom2','ime2')">Post</button>  
                   
                         </div>
                
@@ -101,21 +158,26 @@
                      </th>
                     <th class="forma" style="overflow: hidden;height:12cm;width:12cm; box-shadow: black; padding:5%" >
                         <img src="horse.jpg" alt="profilna" style="height: 8cm; width: 5cm;padding: 0%;margin-left: 0%;">
-                        <p style="font-weight: bolder; color: black; font-size:60%; ">
-                            Horse riding!
-                        </p>
+                        <div style="width: 8cm;margin-left: 0%;">
+                            <button type="button" style="width: 1.5cm;height: 1.5cm;" class="contact" onclick="funk('like3')">
+                             <img src="blacklike.png" style="width: 1cm;height: 1cm;" alt="like">
+                            </button>
+                            <span id="like3">0</span>
+                         </div>
                         <details style="width: 8cm;margin-left: 0%; padding: 0%;">
                             <summary style="width: 8cm;">All comments:</summary>
                             <ul>
                                 <li>Sara Karevska:Where is this?</li>
+                                <div id="tri"></div>
 
                             </ul>
                   
                         </details>
                         <div>
-                             <input style="height:1cm;width:8cm"required type="text" name="name" placeholder="Comment:" autocomplete="anonymous">
-                            <input name="Submit" type="submit" href="insta.html" style=" margin-bottom: 10%;">  
-              
+                            <input id="ime3" style="height:0.35cm;width:4cm;float: left;"required type="text" name="name" placeholder="Name:" autocomplete="anonymous">
+                            <input id="kom3" style="height:0.5cm;width:8cm;float: left;"required type="text" name="name" placeholder="Comment:" autocomplete="anonymous">
+                            <button class="instabtn" style="float: left; overflow: hidden;"  type="button" onclick="comment('tret','kom3','ime3')">Post</button>  
+                  
                         </div>
            
            
@@ -123,8 +185,8 @@
                
                  </thead>
                 <tbody>
-
-                
+                    <th id="output2" class="forma" style="overflow: hidden;height:12cm;width:12cm; box-shadow: black; padding:5%"></th>
+                      
                 
                 </tbody>
             </table>

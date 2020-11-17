@@ -4,7 +4,20 @@
         <meta charset="utf-8">
         <title>Blog</title>
         <link rel="stylesheet" type="text/css" href="stylep.css">
-        
+        <script src="javascript.js"></script>
+        <script type="text/javascript">
+            function myFunction(kade,naslov,text) {
+              var currentTime = new Date ( );
+              var x = document.getElementById(text).value;
+              var y=document.getElementById(naslov).value;
+              if(text=="textareat" || text=="textareat2")
+              var content="<p style='color:teal; font-size: larger;font-weight: bolder; padding-left: 5%;'>"+y+"</p><p style='color: white;font-size: larger;padding-left: 5%;'>"+x+"</p>";
+              
+              else
+              var content="<p style='color:teal; font-size: larger;font-weight: bolder; padding-left: 5%;'>"+y+"</p><p style='color: black;font-size: larger;padding-left: 5%;'>"+x+"</p>";
+              document.getElementById(kade).innerHTML = content+"<p style='color:teal; padding-left: 5%;'>"+currentTime.getDate ( )+"-"+(currentTime.getMonth ()+1) +"-"+currentTime.getFullYear ( )+"<\p>";
+            }
+        </script> 
 
     </head>
     <body>
@@ -27,6 +40,7 @@
                     </button>
                 </div>
             </div>
+            <div id="clock" style="float: right; color: grey; font-weight: bolder;text-align: center; font-size: 120%;"></div>
         </div>
         <ul class="horizontal">
             <li><a href=#t>Fashion</a></li>
@@ -50,6 +64,7 @@
                      classic everyday staples to special occasion pieces with a range of dresses featuring
                      maxi lengths to long-sleeve designs.
                      <a href="https://fashionunited.uk/news/fashion/prettylittlething-launches-first-modest-edit/2020102251507">read more</a>
+                     <p style="color:teal; padding-left: 5%;">5-10-2020</p>
                 </p>
                </div>
                <div style=" overflow: hidden;">
@@ -67,13 +82,23 @@
                     and ensures importance is put on trend spotting and being constantly on the lookout for new brands and designers.
                     <a href="https://fashionunited.com/news/business/designer-face-masks-wholesale-marketplace/2020102636099">read more</a>
                 </p>
+                <p style="color:teal; padding-left: 5%;">1-11-2020</p>
                </div>
+               <div id="novpost"></div>
+               <p style="color:teal; font-size: larger;font-weight: bolder; padding-left: 5%;">
+                Do you want to share you story?
+               </p>
+               <p style="font-size: larger;font-weight: bolder; padding-left: 5%;">Title</p>
+               <input id="naslov" type="text" name="name" placeholder="Title" style="width: 60%; margin-left: 5%;" required>
+               <p  style="font-size: larger;font-weight: bolder; padding-left: 5%;">Content</p>
+               <textarea placeholder="Your Blog here:" id="textarea" style=" width: 70%; margin-left: 5%;"></textarea>
+               <button class="blogbtn" type="button" onclick="myFunction('novpost','naslov','textarea')">Post</button>
         </div>
         <div>
             <p id="c" class="movies">Travel</p>
             <details style="width: 80%;margin-left: 0%; padding: 0%;">
                 <summary style="width: 80%;">Europe</summary>
-                    <ul>
+                    <ul class="blogul">
                         <li>
                             <div style=" overflow: hidden;">
                                 <p style="color:teal; font-size: larger;font-weight: bolder; padding-left: 5%;">
@@ -86,6 +111,7 @@
                                       heart-stopping, whether you're doing it for the first time or the 100th. And even at peak visitor periods,
                                      you're never more than a bridge away from quiet campi (squares), churches concealing luminous Madonnas, or handsome Gothic palazzi.
                                 </p>
+                                <p style="color:teal; padding-left: 5%;">1-10-2020</p>
                                </div>
 
                         </li>
@@ -101,9 +127,21 @@
                                      innovation – with characteristic style, it is also increasingly looking to the future and outwards to the rest of the world.
                                      
                                 </p>
+                                <p style="color:teal; padding-left: 5%;">10-10-2020</p>
                                </div>
 
-                            </li>
+                        </li>
+                        <li><div style=" overflow:hidden"; id="novpostt"></div></li>
+                        <li>
+                            <p style="color:teal; font-size: larger;font-weight: bolder; padding-left: 5%;">
+                               Do you want to share you story?
+                             </p>
+                            <p style="font-size: larger;font-weight: bolder; padding-left: 5%;">Title</p>
+                            <input id="naslovt" type="text" name="name" placeholder="Title" style="width: 60%; margin-left: 5%;" required>
+                            <p  style="font-size: larger;font-weight: bolder; padding-left: 5%;">Content</p>
+                            <textarea placeholder="Your Blog here:" id="textareat" style=" width: 70%; margin-left: 5%;"></textarea>
+                            <button class="blogbtn" type="button" onclick="myFunction('novpostt','naslovt','textareat')">Post</button>
+                        </li>
 
                     </ul>
                
@@ -117,11 +155,12 @@
                                     Maldives
                                 </p>
                                 <p style="color: white;font-size: larger;padding-left: 5%;">
-                                    TThis far-flung destination, located miles from civilization in the Indian Ocean, is made up of nearly 1,200
+                                    This far-flung destination, located miles from civilization in the Indian Ocean, is made up of nearly 1,200
                                      islands that provide an atmosphere that's pretty much paradise. The islands of the Maldives feature lush tropical landscapes
                                      , unparalleled white sand beaches, crystal-clear ocean waters and coral reefs that prompt extensive exploration. 
                                     The best way to experience this slice of paradise? In one of its many overwater bungalows, of course
                                 </p>
+                                <p style="color:teal; padding-left: 5%;">1-8-2020</p>
                                </div>
 
                         </li>
@@ -136,6 +175,7 @@
                                      Tokyo features flashing lights and insanely crowded streets that novice visitors may have a hard time keeping up with. 
                                      But travelers should accept the challenge and enjoy Tokyo's exhilarating energy and unrivaled shopping scene, not to mention its delicious, fresh sushi.
                                 </p>
+                                <p style="color:teal; padding-left: 5%;">5-10-2020</p>
                                </div>
 
                             </li>
@@ -148,9 +188,22 @@
                                         Bali's natural beauty is so profound, travelers have been known to refer to the Indonesian destination as "heaven on Earth." Here, lush rainforests, picturesque mountain ranges, sweeping valleys and scenic beaches all sit side by side. You'll also find a handful of serene temples,
                                          and you can't miss out on a trip to Ubud, Bali's cultural capital and home of the region's famous rice terraces.
                                     </p>
+                                    <p style="color:teal; padding-left: 5%;">15-10-2020</p>
                                    </div>
     
-                                </li>
+                            </li>
+                            <li><div style=" overflow:hidden"; id="novpostt2"></div></li>
+                        <li>
+                            <p style="color:teal; font-size: larger;font-weight: bolder; padding-left: 5%;">
+                               Do you want to share you story?
+                             </p>
+                            <p style="font-size: larger;font-weight: bolder; padding-left: 5%;">Title</p>
+                            <input id="naslovt2" type="text" name="name" placeholder="Title" style="width: 60%; margin-left: 5%;" required>
+                            <p  style="font-size: larger;font-weight: bolder; padding-left: 5%;">Content</p>
+                            <textarea placeholder="Your Blog here:" id="textareat2" style=" width: 70%; margin-left: 5%;"></textarea>
+                            <button class="blogbtn" type="button" onclick="myFunction('novpostt2','naslovt2','textareat2')">Post</button>
+                        </li>
+                            
 
                     </ul>
                
@@ -169,12 +222,22 @@
               while trying to stay fit at home, and they risk losing professional sponsors who may not support them as initially agreed.
               <a href="https://www.un.org/development/desa/dspd/2020/05/covid-19-sport/">read more</a>   
                 </p>
+                <p style="color:teal; padding-left: 5%;">1-9-2020</p>
                </div>
+             <div id="sport"></div>
+             <p style="color:teal; font-size: larger;font-weight: bolder; padding-left: 5%;">
+                Do you want to share you story?
+              </p>
+             <p style="font-size: larger;font-weight: bolder; padding-left: 5%;">Title</p>
+             <input id="naslovs" type="text" name="name" placeholder="Title" style="width: 60%; margin-left: 5%;" required>
+             <p  style="font-size: larger;font-weight: bolder; padding-left: 5%;">Content</p>
+             <textarea placeholder="Your Blog here:" id="textareas" style=" width: 70%; margin-left: 5%;"></textarea>
+             <button class="blogbtn" type="button" onclick="myFunction('sport','naslovs','textareas')">Post</button>
                
                
         </div>
            
-        <div id="Contact" style="background-color: black;height:5cm; position: relative; top:0cm" class="insta">
+        <div id="Contact" style="background-color: black;height:5cm; position: relative; top:1cm" class="insta">
             <div>
                 <a href="tel:076111111" style="color: white;font-size: 150%; position: relative; top:1.5cm;left:2cm">Contact: (+389 76 111 111)</a>
             </div>

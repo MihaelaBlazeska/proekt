@@ -14,7 +14,7 @@
        height: 75%;
        width: 30%;
        position: absolute;
-       left: 60%;
+       left: 57%;
        top: 15%;
        z-index: 1;
 } 
@@ -331,7 +331,8 @@ details
     font-size: xx-large;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
-ul.horizontal {
+
+.horizontal {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -356,4 +357,38 @@ ul.horizontal {
  ul.horizontal li a:hover {
     background-color: #111;
   }
+  .blogbtn {
+    padding: 15px 25px;
+    font-size: 15px;
+    position: absolute;
+    margin-top: 7%;
+    margin-left: 3%;
+    overflow: hidden;
+    cursor: pointer;
+    text-align: center;
+    color: #fff;
+    background-color:teal;
+    border-radius: 5px;
+    box-shadow: 0 3px #999;
+  }
   
+  .blogbtn:hover {background-color: rgb(1, 77, 77)}
+  .blogul{
+      color: ivory;
+  }
+  .instabtn{
+
+   
+        background-color: teal;
+        border: none;
+        color: white;
+        padding: 5px 8px;
+        text-align: center;
+        font-size: 16px;
+        margin: 4px 2px;
+        transition: 0.3s;     
+      
+  }
+.instabtn:hover {
+    background-color: rgb(4, 92, 92);
+}

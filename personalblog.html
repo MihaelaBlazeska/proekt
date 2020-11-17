@@ -5,17 +5,19 @@
    <meta charset="utf-8">
    <title>My personal blog</title>
    <link rel="stylesheet" type="text/css" href="stylep.css">
+   <script src="javascript.js"></script>
+   <script src="welcome.js"></script>
 </head>
 <body>
 
     <div class="home">
              <h1 class="try">Mihaela's Journey</h1>
-             <div class="menu"> 
+             <div class="menu" style="overflow:hidden;"> 
                  <a  href="personalblog.html">Home</a>
                  <a  href="insta.html">Instagram</a>
                  <a  href="blog.html">Blog</a>
                  <a  href="#Contact" >Contact</a>
-                 <div class="dropdown" style="position: relative;top:-0.55cm;left:8.2cm">
+                 <div class="dropdown" style="position: relative;top:-0.55cm;left:8.2cm;">
                      <button class="dropbtn">
                          <a href="#favourite" style="font-size: large; border: none;">Favourites</a>
                      
@@ -26,15 +28,18 @@
                      </div>
                      </button>
                  </div>
+                 
              </div>
+              <div id="clock" style="float: right; color: grey; font-weight: bolder;text-align: center; font-size: 120%;"></div>
+            
     </div>
             
 
 
     <div style=" height: 15cm;">
       <p id="home"> <img class="naslovna" src="me2.png" alt="me"> </p>
-      <p class="text">A little something about myself</p> 
-      <p class="text2">Hi guys! Welcome to my personal blog. I started this blog few days ago, so I will start with introducing myself.
+      <p class="text" id="ime"></p> 
+      <p class="text2"> Welcome to my personal blog. I started this blog few days ago, so I will start with introducing myself.
          I am from a little country in Europe called Macedonia, I hope you've heard of it.
          I live in the capital city of Macedonia,Skopje.
          Currently I am a student at the Faculty od Electrical Engineering and Information Technology, but on
@@ -79,7 +84,7 @@
            that in my parents.<a style=" color:teal;position: relative;" href="music.html">Here</a> are some of my favorite songs I hope you'll like it too. I'm also waiting for your recommendations, so
            <a style=" color:teal;position: relative" href="mailto:m.blazeska1999@gmail.com">contact me</a>!
           </p>
-         
+           
         </div>
 
     </div>
