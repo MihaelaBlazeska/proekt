@@ -8,7 +8,8 @@
        font-size: 220%;
        
 
-    }
+}
+
 .naslovna {
     
        height: 75%;
@@ -20,15 +21,11 @@
 } 
 .dropdown-content a:hover {
     background-color: #ddd;
-  
   }
   
   
   .dropdown:hover .dropdown-content {
-    display: block;
-    height: 2.5cm;
-   
-    
+    display: block;    
   }
   .dropdown .dropbtn:hover {
       text-decoration: underline;
@@ -40,24 +37,19 @@
     color:grey;
     background-color:  rgb(61, 60, 60);
     font-size: 20%;
-    
-    
-    
   }
 
   .dropdown-content a {
-    float: none;
     color: black;
     text-decoration: none;
-    display: block;
-    text-align: left;
-    
+    text-align: center;
+    border: none;
   }
   .dropdown-content {
+    margin-top: 0.7cm;
     display: none;
     position: absolute;
     background-color: #f9f9f9;
-    min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
   }
@@ -79,7 +71,7 @@ div.home {
  height: 3cm;
  text-emphasis-position: bottom;
  z-index: 1;
- overflow: hidden;
+ 
 
  
 }
@@ -99,6 +91,7 @@ p{
        border-top: none;
        border-bottom: none;
        border-width: 0.00001cm;
+       float: left;
        
        
        
@@ -108,7 +101,7 @@ div.menu
 {
     position: relative;
     top:7%;
-    width:30%;
+    width:50%;
     
     
 }   
@@ -386,7 +379,7 @@ details
         text-align: center;
         font-size: 16px;
         margin: 4px 2px;
-        transition: 0.3s;     
+         
       
   }
 .instabtn:hover {

@@ -6,33 +6,25 @@
         <link rel="stylesheet" type="text/css" href="stylep.css">
         <script src="javascript.js"></script>
         <script type="text/javascript">
-        var count = [];
-        var n;
-            function funk(kade, n){
-            if(count[n] == null)
-             count[n] = 0;
-             count[n]++;
-             document.getElementById(kade).innerHTML = count[n]; }
+            var count = 0;
+            function funk(kade){
+             var displayCount = document.getElementById(kade);
+             count++;
+             displayCount.innerHTML = count;};
         </script>
         <script type="text/javascript">
-         var br=[];
-         var n;
-            function comment(kade,text,ime,n) {
+            function comment(kade,text,ime) {
               var x = document.getElementById(text).value;
               var y = document.getElementById(ime).value;
               var content="<li>"+y+": "+x+"</li>";
-              if(br[n]==null)
-              {br[n]=0;}
-              else br[n]++;
-              var out=kade+toString(br[n]);
-              document.getElementById(kade+br[n]).innerHTML= content;
+              document.getElementById(kade).innerHTML= content;
             };
         </script> 
         <script>
             var loadFile = function(event) {
                 var content= "<div class='forma' style='margin:2%;overflow: hidden;height:13cm;width:10cm; box-shadow: black; padding:5%'>"+
                             "<p><img id='output' style='height:8cm ; width:5cm ; margin-left:0%;'></p><div style='width: 8cm;margin-left: 0%;'>"+
-                            "<button type='button' style='width: 1.5cm;height: 1.5cm;' class='contact' onclick='funk('like3',2)'>"+
+                            "<button type='button' style='width: 1.5cm;height: 1.5cm;' class='contact' onclick='funk('like3')'>"+
                             " <img src='blacklike.png' style='width: 1cm;height: 1cm;' alt='like'> </button>"+
                             "<span id='like3'>0</span>"+"</div>"+
                             "<details style='width: 8cm;margin-left: 0%; padding: 0%;'>"+
@@ -41,7 +33,7 @@
                             "<div>"+
                            " <input id='ime3' style='height:0.35cm;width:4cm;float: left;'required type='text' name='name' placeholder='Name:'>"+
                            " <input id='kom3' style='height:0.5cm;width:8cm;float: left;'required type='text' name='name' placeholder='Comment:'>"+
-                           "<button class='instabtn' style='float: left; overflow: hidden;' type='button' onclick='comment('tri','kom3','ime3',2)'>Post</button> "+ 
+                           "<button class='instabtn' style='float: left; overflow: hidden;' type='button' onclick='comment('tri','kom3','ime3')'>Post</button> "+ 
                            "</div></div>";
                 document.getElementById('output2').innerHTML=content;
                 var image = document.getElementById('output');
@@ -60,16 +52,14 @@
                 <a  href="insta.html">Instagram</a>
                 <a  href="blog.html">Blog</a>
                 <a  href="#Contact" >Contact</a>
-                <a href="anketa.html">Feedback</a>
-                <div class="dropdown" style="position: absolute;margin-left: 12cm;margin-top: 1.75%;">
+                <div class="dropdown" style="position: relative;top:-0.55cm;left:8.2cm">
                     <button class="dropbtn">
                         <a href="personalblog.html#favourite" style="font-size: large; border: none;">Favourites</a>
                     
                        <div class="dropdown-content">
-                         <a href="music.html" style="border: none;">Music</a>
-                         <a href="food.html" style="border: none;">Food</a>
-                         <a href="movies.html" style="border: none;">Movies</a>
-
+                         <a href="music.html">Music</a>
+                         <a href="food.html">Food</a>
+                         <a href="movies.html">Movies</a>
                        </div>
                     </button>
                 </div>
@@ -109,7 +99,7 @@
             <div class="forma" style="height:13cm;width:10cm; box-shadow: black;padding:5%;margin: 2%; " >
                <img src="bday.jpg" alt="profilna" style="height: 8cm; width: 5cm;padding: 0%;margin-left: 0%;">
                <div style="width: 8cm;margin-left: 0%;">
-                  <button type="button" style="width: 1.5cm;height: 1.5cm;" class="contact" onclick="funk('like1',0)">
+                  <button type="button" style="width: 1.5cm;height: 1.5cm;" class="contact" onclick="funk('like1')">
                    <img src="blacklike.png" style="width: 1cm;height: 1cm;" alt="like">
                   </button>
                   <span id="like1">0</span>
@@ -120,9 +110,7 @@
                        <li>Ana Ankovska: Happpy birthday!!!</li>
                        <li>Kiro Krstevski: Be happiest!</li>
                        <li>Gordana Gocevska:Wish you all the best</li>
-                       <li id="prv0"></li>
-                       <li id="prv1"></li>
-                       <li id="prv2"></li>
+                       <li id="prv"></li>
 
                    </ul>
               
@@ -137,7 +125,7 @@
               <div class="forma" style="overflow: hidden;height:13cm;width:10cm;margin: 2%; box-shadow: black; padding:5%" >
                 <img src="kayaking.jpg" alt="profilna" style="height: 8cm; width: 5cm;">
                 <div style="width: 8cm;margin-left: 0%;">
-                    <button type="button" style="width: 1.5cm;height: 1.5cm;" class="contact" onclick="funk('like2',1)">
+                    <button type="button" style="width: 1.5cm;height: 1.5cm;" class="contact" onclick="funk('like2')">
                      <img src="blacklike.png" style="width: 1cm;height: 1cm;" alt="like">
                     </button>
                     <span id="like2">0</span>
@@ -147,10 +135,7 @@
                      <ul>
                         <li>Ana Ankovska: Me too!</li>
                         <li>Kiro Krstevski: The best photographer is me</li>
-                        <div id="vtor0"></div>
-                        <div id="vtor1"></div>
-                        <div id="vtor2"></div>
-                        <div id="vtor3"></div>
+                        <div id="vtor"></div>
 
                     </ul>
               
@@ -158,7 +143,7 @@
                 <div>
                     <input id="ime2" style="height:0.35cm;width:4cm;float: left;"required type="text" name="name" placeholder="Name:" autocomplete="anonymous">
                     <input id="kom2" style="height:0.5cm;width:8cm;float: left;"required type="text" name="name" placeholder="Comment:" autocomplete="anonymous">
-                    <button class="instabtn" style="float: left; overflow: hidden;"  type="button" onclick="comment('vtor','kom2','ime2',1)">Post</button>  
+                    <button class="instabtn" style="float: left; overflow: hidden;"  type="button" onclick="comment('vtor','kom2','ime2')">Post</button>  
           
                 </div>
        

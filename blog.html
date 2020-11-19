@@ -12,7 +12,6 @@
               var y=document.getElementById(naslov).value;
               if(text=="textareat" || text=="textareat2")
               var content="<p style='color:teal; font-size: larger;font-weight: bolder; padding-left: 5%;'>"+y+"</p><p style='color: white;font-size: larger;padding-left: 5%;'>"+x+"</p>";
-              
               else
               var content="<p style='color:teal; font-size: larger;font-weight: bolder; padding-left: 5%;'>"+y+"</p><p style='color: black;font-size: larger;padding-left: 5%;'>"+x+"</p>";
               document.getElementById(kade).innerHTML = content+"<p style='color:teal; padding-left: 5%;'>"+currentTime.getDate ( )+"-"+(currentTime.getMonth ()+1) +"-"+currentTime.getFullYear ( )+"<\p>";
@@ -28,15 +27,17 @@
                 <a  href="insta.html">Instagram</a>
                 <a  href="blog.html">Blog</a>
                 <a  href="#Contact" >Contact</a>
-                <div class="dropdown" style="position: relative;top:-0.55cm;left:8.4cm">
+                <a href="anketa.html">Feedback</a>
+                <div class="dropdown" style="position: absolute;margin-left: 12cm;margin-top: 1.75%;">
                     <button class="dropbtn">
                         <a href="personalblog.html#favourite" style="font-size: large; border: none;">Favourites</a>
                     
-                    <div class="dropdown-content">
-                      <a href="music.html">Music</a>
-                      <a href="food.html">Food</a>
-                      <a href="movies.html">Movies</a>
-                    </div>
+                       <div class="dropdown-content">
+                         <a href="music.html" style="border: none;">Music</a>
+                         <a href="food.html" style="border: none;">Food</a>
+                         <a href="movies.html" style="border: none;">Movies</a>
+
+                       </div>
                     </button>
                 </div>
             </div>

@@ -5,7 +5,14 @@
         <title>Favourite movies</title>
         <link rel="stylesheet" type="text/css" href="stylep.css">
         <script src="javascript.js"></script>
-        
+        <script>
+            function voting(kade, odkade)
+            {
+                var x = document.getElementById(odkade).value;
+                var nova = (document.getElementById(kade).value + x)/2;
+                document.getElementById(kade).value=  nova;
+            }
+        </script>
 
     </head>
     <body>
@@ -17,17 +24,19 @@
                      <a  href="insta.html">Instagram</a>
                      <a  href="blog.html">Blog</a>
                      <a  href="#Contact" >Contact</a>
-                     <div class="dropdown" style="position: relative;top:-0.55cm;left:8.2cm">
-                         <button class="dropbtn">
-                             <a href="personalblog.html#favourite" style="font-size: large; border: none;">Favourites</a>
-                         
-                            <div class="dropdown-content">
-                              <a href="music.html">Music</a>
-                              <a href="food.html">Food</a>
-                              <a href="movies.html">Movies</a>
-                            </div>
-                         </button>
-                     </div>
+                     <a href="anketa.html">Feedback</a>
+                <div class="dropdown" style="position: absolute;margin-left: 12cm;margin-top: 1.75%;">
+                    <button class="dropbtn">
+                        <a href="personalblog.html#favourite" style="font-size: large; border: none;">Favourites</a>
+                    
+                       <div class="dropdown-content">
+                         <a href="music.html" style="border: none;">Music</a>
+                         <a href="food.html" style="border: none;">Food</a>
+                         <a href="movies.html" style="border: none;">Movies</a>
+
+                       </div>
+                    </button>
+                </div>
                  </div>
                  <div id="clock" style="float: right; color: grey; font-weight: bolder;text-align: center; font-size: 120%;"></div>
             </div>
@@ -41,11 +50,15 @@
         <div>
             <p id="t" class="movies">Thriller</p>
                 <div class="blok" >
-                
+                    
                     <a href="file:///C:/Users/Dimitar/Desktop/personal%20blog/movies.html">
                         <img src="gonegirl.jpg" alt="gonegirl" class="slikite" >
                     </a>
-                    <meter min="1" max="10" value="8.1">IMDB rating</meter>
+                    <meter id="gonegirl" min="1" max="10" value="8.1">IMDB rating</meter>
+                     <p style="background-color: white; padding-left: 60%; font-weight: bold;">Rate the movie
+                        1<input  name="blog" type="range"  id="vote1" min="1" max="10"  step="1" > 10
+                        <button  class="instabtn" style="float: left; overflow: hidden;"  type="button" onclick="voting('gonegirl','vote1')">Post</button>
+                     </p>
                      <div>
                         <p class="mftext" style="margin-left: 22cm;">
                              Gone Girl
@@ -63,7 +76,11 @@
             
                  <div class=blok>
                     <a href="https://www.imdb.com/title/tt4160708/"><img src="dontbreath.jpg" alt="gonegirl" class="slikite" ></a>
-                    <meter min="1" max="10" value="7.1">IMDB rating</meter>
+                    <meter id="dontbreath" min="1" max="10" value="7.1">IMDB rating</meter>
+                     <p style="background-color: white; padding-left: 60%; font-weight: bold;">Rate the movie
+                        1<input  name="blog" type="range"  id="vote2" min="1" max="10"  step="1" > 10
+                        <button  class="instabtn" style="float: left; overflow: hidden;"  type="button" onclick="voting('dontbreath','vote2')">Post</button>
+                     </p>
                     <p class="mftext" style="margin-left: 22cm;">
                     Don't breath
                     </p>
@@ -80,7 +97,11 @@
             <p id="c" class="movies">Comedy</p>
                 <div class=blok>
                     <a href="https://www.imdb.com/title/tt0109686/?ref_=fn_al_tt_1"> <img src="dumb.jpeg" alt="gonegirl" class="slikite" ></a>
-                     <meter min="1" max="10" value="7.3">IMDB rating</meter>
+                     <meter id="dumb" min="1" max="10" value="7.3">IMDB rating</meter>
+                     <p style="background-color: white; padding-left: 60%; font-weight: bold;">Rate the movie
+                        1<input  name="blog" type="range"  id="vote3" min="1" max="10"  step="1" > 10
+                        <button  class="instabtn" style="float: left; overflow: hidden;"  type="button" onclick="voting('dumb','vote3')">Post</button>
+                     </p>
                     <p class="mftext" style="margin-left: 22cm;">
                          Dumb and Dumber
                      </p>
@@ -91,7 +112,11 @@
                 </div>
                 <div class=blok>
                     <a href="https://www.imdb.com/title/tt1618434/?ref_=nv_sr_srsg_0"><img src="murder-mystery.jpg" alt="gonegirl" class="slikite" ></a>
-                    <meter min="1" max="10" value="6">IMDB rating</meter>
+                    <meter  id="murder" min="1" max="10" value="6">IMDB rating</meter>
+                    <p style="background-color: white; padding-left: 60%; font-weight: bold;">Rate the movie
+                        1<input  name="blog" type="range"  id="vote4" min="1" max="10"  step="1" > 10
+                        <button  class="instabtn" style="float: left; overflow: hidden;"  type="button" onclick="voting('murder','vote4')">Post</button>
+                     </p>
                     <p class="mftext" style="margin-left: 22cm;">
                         Murder Mystery
                     </p>
@@ -106,7 +131,11 @@
             <p id="cr" class="movies">Crime</p>
             <div class=blok>
                 <a href="https://www.imdb.com/title/tt7286456/?ref_=nv_sr_srsg_3"><img src="joker.jpg" alt="joker" class="slikite" ></a>
-                <meter min="1" max="10" value="8.5">IMDB rating</meter>
+                <meter id="joker" min="1" max="10" value="8.5">IMDB rating</meter>
+                <p style="background-color: white; padding-left: 60%; font-weight: bold;">Rate the movie
+                    1<input  name="blog" type="range"  id="vote5" min="1" max="10"  step="1" > 10
+                    <button  class="instabtn" style="float: left; overflow: hidden;"  type="button" onclick="voting('joker','vote5')">Post</button>
+                 </p>
                 <p class="mftext" style="margin-left: 22cm;">
                   Joker
                 </p>
@@ -117,7 +146,11 @@
                </div>
                <div class=blok>
                 <a href="https://www.imdb.com/title/tt8784956/?ref_=nv_sr_srsg_0"><img src="ava-2.jpg" alt="Ava" class="slikite" ></a>
-                <meter min="1" max="10" value="5.3">IMDB rating</meter>
+                <meter id="ava" min="1" max="10" value="5.3">IMDB rating</meter>
+                <p style="background-color: white; padding-left: 60%; font-weight: bold;">Rate the movie
+                    1<input  name="blog" type="range"  id="vote6" min="1" max="10"  step="1" > 10
+                    <button  class="instabtn" style="float: left; overflow: hidden;"  type="button" onclick="voting('ava','vote6')">Post</button>
+                 </p>
                 <p class="mftext" style="margin-left: 22cm;">
                   Ava
                 </p>
