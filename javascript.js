@@ -12,7 +12,6 @@ function updateClock ( )
   currentMinutes = ( currentMinutes < 10 ? "0" : "" ) + currentMinutes;
   currentSeconds = ( currentSeconds < 10 ? "0" : "" ) + currentSeconds;
   currentHours= (currentHours < 10 ? "0" : "")+currentHours;
-
   switch(Month)
   {
     case (0): Month="Jan"; break;
@@ -36,5 +35,55 @@ function updateClock ( )
   setTimeout(updateClock,1000);
 }
 window.addEventListener("load",updateClock,false);
+
+function generatePopup() {
+ 
+  const popupContainer = document.createElement('div');
+  popupContainer.classList.add('popup'); 
+  const titleContainer = document.createElement('div');
+  titleContainer.classList.add('title');
+  const title = document.createElement('h2');
+  title.textContent = "Thank you for leaving your feedback";
+  titleContainer.appendChild(title);
+  popupContainer.appendChild(title);
+  
+  document.body.appendChild(popupContainer);
+}
+clicked=0
+function dark()
+{ 
+ 
+  if(clicked==0)               
+   {document.body.setAttribute( "style", 
+      "background-color:  rgb(88, 85, 85)" ); 
+      clicked=1;  }
+  else
+  {document.body.setAttribute( "style", 
+  "background-color: white" );
+  clicked=0;  }
+
+} 
+$(document).ready(function(){
+  $("li").on("click", function(){
+    $(this).hide();
+  });
+});
+$(document).ready(function(){
+  $("#butsub").click(function(){
+    $("#bod").css("color", "red").slideUp(2000).slideDown(2000);
+  });
+});
+
+
+
+
+document.body.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+        document.querySelectorAll('.popup').forEach(popup => popup.remove());
+    }
+}, false);
+
+
+
 
 

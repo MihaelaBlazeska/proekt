@@ -17,6 +17,25 @@
               document.getElementById(kade).innerHTML = content+"<p style='color:teal; padding-left: 5%;'>"+currentTime.getDate ( )+"-"+(currentTime.getMonth ()+1) +"-"+currentTime.getFullYear ( )+"<\p>";
             }
         </script> 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script> 
+            var pom=0
+            $(document).ready(function(){
+            
+                $(this).click(function(){
+            
+                if(pom==0){
+                $(this).find(".panel1").slideDown("slow");
+                pom=1;}
+                else
+                {$(this).find(".panel1").slideUp("slow");
+                pom=0;}
+                });
+            
+             
+            });
+            
+            </script>
 
     </head>
     <body>
@@ -48,6 +67,7 @@
             <li><a href=#c>Travel</a></li>
             <li><a href=#cr>Sport</a></li>
         </ul>
+        <div><button  style=" float: right; background-color: teal; font-weight: bolder; border-style: hidden;" onclick="dark()">Change Mode</button></div>
         <div>
             <p id="t" class="movies" style="overflow: hidden;">Fashion</p>
             <div style=" overflow: hidden;">
@@ -97,118 +117,57 @@
         </div>
         <div>
             <p id="c" class="movies">Travel</p>
-            <details style="width: 80%;margin-left: 0%; padding: 0%;">
-                <summary style="width: 80%;">Europe</summary>
-                    <ul class="blogul">
-                        <li>
-                            <div style=" overflow: hidden;">
-                                <p style="color:teal; font-size: larger;font-weight: bolder; padding-left: 5%;">
+           
+                
+                    <ul class="blogul" id="flip" style="padding:none;" ><p style="margin: none;font-weight: bolder; color: rgb(77, 71, 71); ">Europe</p>
+                        <li class="panel1">
+                            <div style=" overflow: hidden;  padding-left:25%; ">
+                                <p style="color:teal; font-size: larger;font-weight: bolder;text-align: center;">
                                     VENICE
                                 </p>
-                                <p style="color: white;font-size: larger;padding-left: 5%;">
+                                <p style="color: white;font-size: larger;text-align: center;">
                                     There are days when visitors to this exquisite jewel box of a city outnumber locals two-to-one, 
                                     and when getting from the station to St Mark's square is a battle. But despite this, Venice never loses its capacity
                                      to enchant: stepping out of the station to be greeted by a glittering canal with the dome of San Simeon Piccolo beyond remains
                                       heart-stopping, whether you're doing it for the first time or the 100th. And even at peak visitor periods,
                                      you're never more than a bridge away from quiet campi (squares), churches concealing luminous Madonnas, or handsome Gothic palazzi.
                                 </p>
-                                <p style="color:teal; padding-left: 5%;">1-10-2020</p>
+                                <p style="color:teal;text-align: center; ">1-10-2020</p>
                                </div>
 
                         </li>
-                        <li>
-                            <div style=" overflow: hidden;">
-                                <p style="color:teal; font-size: larger;font-weight: bolder; padding-left: 5%;">
+                        <li class="panel1">
+                            <div style=" overflow: hidden;  padding-left:25%">
+                                <p style="color:teal; font-size: larger;font-weight: bolder; ">
                                     PARIS
                                 </p>
-                                <p style="color: white;font-size: larger;padding-left: 5%;">
+                                <p style="color: white;font-size: larger;">
                                     The uniform sandstone of the Haussmann buildings, the abundance of gilded historic monuments, and the
                                      glimmering Seine and its elegant bridges have arguably made Paris the most recognisable and romanticised cityscape in the world.
                                       But though the city wears its history – of monarchy, revolution, revolt and artistic
                                      innovation – with characteristic style, it is also increasingly looking to the future and outwards to the rest of the world.
                                      
                                 </p>
-                                <p style="color:teal; padding-left: 5%;">10-10-2020</p>
+                                <p style="color:teal; ">10-10-2020</p>
                                </div>
 
                         </li>
-                        <li><div style=" overflow:hidden"; id="novpostt"></div></li>
-                        <li>
-                            <p style="color:teal; font-size: larger;font-weight: bolder; padding-left: 5%;">
+                        <li class="panel1" style="padding-left:25%"><div style=" overflow:hidden"; id="novpostt"></div></li>
+                        <li class="panel1" style="text-align: left;padding-left: 5%;">
+                            <p style="color:teal; font-size: larger;font-weight: bolder;">
                                Do you want to share you story?
                              </p>
-                            <p style="font-size: larger;font-weight: bolder; padding-left: 5%;">Title</p>
-                            <input id="naslovt" type="text" name="name" placeholder="Title" style="width: 60%; margin-left: 5%;" required>
-                            <p  style="font-size: larger;font-weight: bolder; padding-left: 5%;">Content</p>
-                            <textarea placeholder="Your Blog here:" id="textareat" style=" width: 70%; margin-left: 5%;"></textarea>
+                            <p style="font-size: larger;font-weight: bolder;">Title</p>
+                            <input id="naslovt" type="text" name="name" placeholder="Title" style="width: 60%; " required>
+                            <p  style="font-size: larger;font-weight: bolder;">Content</p>
+                            <textarea placeholder="Your Blog here:" id="textareat" style=" width: 70%;"></textarea>
                             <button class="blogbtn" type="button" onclick="myFunction('novpostt','naslovt','textareat')">Post</button>
                         </li>
 
                     </ul>
                
-             </details>
-             <details style="width: 80%;margin-left: 0%; padding: 0%;">
-                <summary style="width: 80%;">Asia</summary>
-                    <ul>
-                        <li>
-                            <div style=" overflow: hidden;">
-                                <p style="color:teal; font-size: larger;font-weight: bolder; padding-left: 5%;">
-                                    Maldives
-                                </p>
-                                <p style="color: white;font-size: larger;padding-left: 5%;">
-                                    This far-flung destination, located miles from civilization in the Indian Ocean, is made up of nearly 1,200
-                                     islands that provide an atmosphere that's pretty much paradise. The islands of the Maldives feature lush tropical landscapes
-                                     , unparalleled white sand beaches, crystal-clear ocean waters and coral reefs that prompt extensive exploration. 
-                                    The best way to experience this slice of paradise? In one of its many overwater bungalows, of course
-                                </p>
-                                <p style="color:teal; padding-left: 5%;">1-8-2020</p>
-                               </div>
-
-                        </li>
-                        <li>
-                            <div style=" overflow: hidden;">
-                                <p style="color:teal; font-size: larger;font-weight: bolder; padding-left: 5%;">
-                                    TOKYO
-                                </p>
-                                <p style="color: white;font-size: larger;padding-left: 5%;">
-                                    There's no dilly-dallying here – Tokyo is as fast-paced as cities come 
-                                    (it's one of the largest cities in the world, after all). With millions upon millions of residents to its name,
-                                     Tokyo features flashing lights and insanely crowded streets that novice visitors may have a hard time keeping up with. 
-                                     But travelers should accept the challenge and enjoy Tokyo's exhilarating energy and unrivaled shopping scene, not to mention its delicious, fresh sushi.
-                                </p>
-                                <p style="color:teal; padding-left: 5%;">5-10-2020</p>
-                               </div>
-
-                            </li>
-                            <li>
-                                <div style=" overflow: hidden;">
-                                    <p style="color:teal; font-size: larger;font-weight: bolder; padding-left: 5%;">
-                                        BALI
-                                    </p>
-                                    <p style="color: white;font-size: larger;padding-left: 5%;">
-                                        Bali's natural beauty is so profound, travelers have been known to refer to the Indonesian destination as "heaven on Earth." Here, lush rainforests, picturesque mountain ranges, sweeping valleys and scenic beaches all sit side by side. You'll also find a handful of serene temples,
-                                         and you can't miss out on a trip to Ubud, Bali's cultural capital and home of the region's famous rice terraces.
-                                    </p>
-                                    <p style="color:teal; padding-left: 5%;">15-10-2020</p>
-                                   </div>
-    
-                            </li>
-                            <li><div style=" overflow:hidden"; id="novpostt2"></div></li>
-                        <li>
-                            <p style="color:teal; font-size: larger;font-weight: bolder; padding-left: 5%;">
-                               Do you want to share you story?
-                             </p>
-                            <p style="font-size: larger;font-weight: bolder; padding-left: 5%;">Title</p>
-                            <input id="naslovt2" type="text" name="name" placeholder="Title" style="width: 60%; margin-left: 5%;" required>
-                            <p  style="font-size: larger;font-weight: bolder; padding-left: 5%;">Content</p>
-                            <textarea placeholder="Your Blog here:" id="textareat2" style=" width: 70%; margin-left: 5%;"></textarea>
-                            <button class="blogbtn" type="button" onclick="myFunction('novpostt2','naslovt2','textareat2')">Post</button>
-                        </li>
-                            
-
-                    </ul>
-               
-             </details>
+             
+             
         </div>
         <div>
             <p id="cr" class="movies" style="overflow: hidden;">Sport</p>

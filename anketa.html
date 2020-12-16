@@ -34,7 +34,8 @@
     </div>
    <section style="padding-left: 2%; padding-right: 2%;  margin-top: 2%;">
      <form method="post" action="personalblog.html" autocomplete="on" class="forma" >
-       <section class="anketaprozor">
+       <section class="anketaprozor" >
+       </div id="bod">
          <p class="anketa" style="background-color: white;">Your name:* <br>
             <input required type="text" name="name" placeholder="Name" autofocus autocomplete="anonymous" required>
          </p>
@@ -78,18 +79,32 @@
          <p class="anketa" style="background-color: white;">Rate your favourite category in the blog: <br>0
             <input name="blog" type="range" min="1" max="10" step="1" value=""> 10
          </p>
+        </div>
          <p class="anketa" style="background-color: white;">
         
             Date:<br>
             <input type="datetime-local">
             <section>
-                <input name="Submit" type="submit" href="personalblog.html" >
+                <li class="nav-item">
+                    <a href="#signin" id="sign-in"  onclick="generatePopup()" >Submit</a>
+                </li>
                 <input name="Clear" type="reset">
             </section>
          </p>
         </section>
       </form>
+     
      </section>
+     <div class="cover hidden" id="cover">
+        <div class="form-container hidden" id="sign-in-form">
+            <form action="my_profile.html" method="post">
+                <h1>Thank you for your feedback</h1>
+                <button type="submit" style="margin-top: 20px; margin-bottom: 2rem;"class="btn gradient-btn">Continue</button>
+            </form>
+        </div>
+    </div>
+    <div id="tuka"></div>
+
    <div id="Contact" style="background-color: black;height:5cm;" class="insta">
         <div>
             <a href="tel:076111111" style="color: white;font-size: 150%; position: relative; top:1.5cm;left:2cm">Contact: (+389 76 111 111)</a>
