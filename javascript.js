@@ -98,13 +98,28 @@ var myWindow;
   myWindow = window.open(koj,"My window", "width=400, height=200");
   myWindow.focus();
    }
+
+   const deklaracija = () => {// da obezbedi mesto za 100 kom pod sekoja slika
+    matrix = [];
+    for (let i = 0; i < 100; i++) {
+        matrix.push("<li></li>");
+    }
+    localStorage.setItem("matrica",matrix);
+  }
+  function loadKom(kade,komentar,broj) {
+    var kom=document.getElementById(komentar).value;
+    document.getElementById(komentar).value="";
+    var markup = "<li "+username+":"+ kom  +"</li>";
+    matrix=localStorage.getItem("matrica");
+    matrix[broj]=matrix[broj]+markup;
+    localStorage.setItem("matrica",matrix);
+    document.getElementById(kade).innerHTML=matrix[br];
+  }
   
    
  
-   function loadKom(kade) {
-       if (!window.sessionStorage.getItem("herePreviously")) {
-           sessionStorage.setItem("herePreviously", "true");
-       }
+  /* function loadKom(kade,komentar,broj) {
+       var kom=document.getElementById(komentar)
        var pom=0;
        var lenght = localStorage.length;
        com = [];
@@ -124,12 +139,12 @@ var myWindow;
        markup += "</ul>";
        document.getElementById(kade).innerHTML = markup;
    } // end function
-   function post(kade,sto) {
+   function post(kade,sto,broj) {
        var c = document.getElementById(sto);
        localStorage.setItem(c.value, username+":"+c.value);
        c.value = "";
-       loadKom(kade);
-   }
+       loadKom(kade,broj);
+   }*/
    function deleteKom(pom,kade) {
      console.log("vlagam da brisam");
      var element=document.getElementById(pom);
@@ -137,3 +152,20 @@ var myWindow;
     loadKom(kade);
 
    }
+   window.addEventListener("load",deklaracija,false);
+   function loadinsta()
+   {
+    matrix=localStorage.getItem("matrica");
+    for(var i=0;i<1;i++)
+        if(matrix[i]!=null)
+        {
+          document.getElementById("kade"+i).innerHTML=matrix[i];
+        }
+   }
+window.addEventListener("load",loadinsta,false);
+function voting(kade, odkade)
+            {
+                var x = document.getElementById(odkade).value;
+                var nova = (document.getElementById(kade).value + x)/2;
+                document.getElementById(kade).value=  nova;
+            }

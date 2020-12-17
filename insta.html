@@ -120,7 +120,7 @@
        </div>
         <div style="margin-top: 1cm;">
             <a href="insta.html" >
-                <img src="profile.jpg" alt="profile_picture" style="border-radius: 5cm; margin-left: 3.5cm; width:8.5cm; height: 9cm;"></a>
+                <img src="./img/profile.jpg" alt="profile_picture" style="border-radius: 5cm; margin-left: 3.5cm; width:8.5cm; height: 9cm;"></a>
     
             <table style="font-size: 90%; padding-left:17cm; position:relative;top: -5.5cm;"> 
                 <thead>
@@ -150,29 +150,29 @@
         </div> 
         <div style="padding-left:30%">
             <div class="forma" style="width:10cm; height: auto; box-shadow: black;padding:5%;margin: 2%; " >
-               <img  name="prva" onmouseover="load2('prva','kokteli.png')" onmouseout="load1('prva','bday.jpg')" ondblclick="funk('like1',0)" src="bday.jpg" alt="profilna" style="height: 8cm; width: 5cm;padding: 0%;margin-left: 0%;">
+               <img  name="prva" onmouseover="load2('prva','./img/kokteli.png')" onmouseout="load1('prva','./img/bday.jpg')" ondblclick="funk('like1',0)" src="./img/bday.jpg" alt="profilna" style="height: 8cm; width: 5cm;padding: 0%;margin-left: 0%;">
                <div style="width: 8cm;margin-left: 0%;">
                   <button type="button" style="width: 1.5cm;height: 1.5cm;" class="contact" onclick="funk('like1',0)">
-                   <img src="blacklike.png" style="width: 1cm;height: 1cm;" alt="like">
+                   <img src="./img/blacklike.png" style="width: 1cm;height: 1cm;" alt="like">
                   </button>
                   <span id="like1">0</span>
                </div>
                <details style=" width: 8cm;margin-left: 0%; padding: 0%;overflow: hidden;align-content: center;">
                    <summary style="width: 10cm; overflow: hidden;">All comments:</summary>
-                   <div id="prvalista"></div>
+                   <ul id="kade0"></ul>
               
                 </details>
                <div>
                   <input id="kom1" style="height:0.5cm;width:8cm;float: left;"required type="text" name="name" placeholder="Comment:" autocomplete="anonymous">
-                  <button class="instabtn" style="float: left; overflow: hidden;"  type="button" onclick="post('prvalista','kom1')">Post</button>  
+                  <button class="instabtn" style="float: left; overflow: hidden;"  type="button" onclick="loadKom('kade0','kom1',0)">Post</button>  
         
               </div>
               </div>
               <div class="forma" style="overflow: hidden;height:auto;width:10cm;margin: 2%; box-shadow: black; padding:5%" >
-                <img  name="vtora" onmouseover="load2('vtora','matka.jpg')" onmouseout="load1('vtora','kayaking.jpg')" src="kayaking.jpg" alt="profilna" style="height: 8cm; width: 5cm;">
+                <img  name="vtora" onmouseover="load2('vtora','./img/matka.jpg')" onmouseout="load1('vtora','./img/kayaking.jpg')" src="./img/kayaking.jpg" alt="profilna" style="height: 8cm; width: 5cm;">
                 <div style="width: 8cm;margin-left: 0%;">
                     <button type="button" style="width: 1.5cm;height: 1.5cm;" class="contact" onclick="funk('like2',1)">
-                     <img src="blacklike.png" style="width: 1cm;height: 1cm;" alt="like">
+                     <img src="./img/blacklike.png" style="width: 1cm;height: 1cm;" alt="like">
                     </button>
                     <span id="like2">0</span>
                  </div>
@@ -207,8 +207,8 @@
                     <a href="tel:076111111" style="color: white;font-size: 150%; position: relative;top:1.5cm; left:1cm;">Contact: (+389 76 111 111)</a>
                 </div>
                 <div>
-                <a style="float: right;" href="https://www.facebook.com/mihaela.blazeska.7" ><img class="contact" src="fb.jpg" alt="fb"></a>
-                <a style="float: right; margin-right: 1cm;" href="https://www.instagram.com/mihaelablazeska/?hl=en" ><img class="contact" src="insta.jpg" alt="fb"></a>
+                <a style="float: right;" href="https://www.facebook.com/mihaela.blazeska.7" ><img class="contact" src="./img/fb.jpg" alt="fb"></a>
+                <a style="float: right; margin-right: 1cm;" href="https://www.instagram.com/mihaelablazeska/?hl=en" ><img class="contact" src="./img/insta.jpg" alt="fb"></a>
                 <p style="float: right; color:white ;padding:0.2cm;position: relative;left:18cm; font-size: 150%">Social networks:</p>
                 
                 </div>
