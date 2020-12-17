@@ -71,16 +71,6 @@ function dark()
 
 }
 
-var count = [];
-var n;
-function funk(kade, n){
-  if(count[n] == null){
-    count[n] = 0;
-  }
-  count[n]++;
-  document.getElementById(kade).innerHTML = count[n]; 
-}
-
 
 function myFunction(kade,naslov,text) {
   var currentTime = new Date ( );
@@ -94,75 +84,80 @@ function myFunction(kade,naslov,text) {
 }
 
 var myWindow;
-  function openwin(koj) {
-  myWindow = window.open(koj,"My window", "width=400, height=200");
-  myWindow.focus();
-   }
+function openwin(koj) {
+    myWindow = window.open(koj,"My window", "width=400, height=200");
+    myWindow.focus();
+}
 
-   const deklaracija = () => {// da obezbedi mesto za 100 kom pod sekoja slika
-    matrix = [];
-    for (let i = 0; i < 100; i++) {
-        matrix.push("<li></li>");
+// const deklaracija = () => {
+// for (let i = 0; i < 100; i++) {
+//     matrix[i]=("<li></li>");
+//     localStorage.setItem(i, matrix[i]);
+// }
+// }
+var comments = [];
+function loadKom(kade, komentar, broj) {
+    if(comments[broj] == null){
+        comments[broj] = 0;
     }
-    localStorage.setItem("matrica",matrix);
-  }
-  function loadKom(kade,komentar,broj) {
-    var kom=document.getElementById(komentar).value;
+
+    var kom = document.getElementById(komentar).value;
     document.getElementById(komentar).value="";
-    var markup = "<li "+username+":"+ kom  +"</li>";
-    matrix=localStorage.getItem("matrica");
-    matrix[broj]=matrix[broj]+markup;
-    localStorage.setItem("matrica",matrix);
-    document.getElementById(kade).innerHTML=matrix[br];
-  }
-  
-   
- 
-  /* function loadKom(kade,komentar,broj) {
-       var kom=document.getElementById(komentar)
-       var pom=0;
-       var lenght = localStorage.length;
-       com = [];
-       for (var i = 0; i < lenght; ++i) {
-           com[i] = localStorage.key(i);
-       }
-       var markup = "<ul>";
-       for (var c in com) {
-           var query = localStorage.getItem(com[c]);
-           markup += "<li id='"+pom+"'>"+ query  +"</li>";
-              // "<br><input id = '" + com[c] +
-               // "'type = 'button' class='del'" +
-              // "value = 'Delete' style='border:none; background-color:black; color: white' onclick='izbrisi('"+pom+"')'>
-              
-               pom++;
-       } //end for
-       markup += "</ul>";
-       document.getElementById(kade).innerHTML = markup;
-   } // end function
-   function post(kade,sto,broj) {
-       var c = document.getElementById(sto);
-       localStorage.setItem(c.value, username+":"+c.value);
-       c.value = "";
-       loadKom(kade,broj);
-   }*/
+    comments[broj]++;
+
+    var markup = document.createElement("LI");
+    markup.innerHTML = (username+": "+kom);
+    markupLoad = username+": "+kom;
+
+    localStorage.setItem(("komentar"+broj+comments[broj]), markupLoad);
+    localStorage.setItem(broj, comments[broj]);
+
+    document.getElementById(kade).append(markup);
+}
+
+var count = [];
+var k;
+function funk(where, k){
+    if(count[k] == null){
+        count[k] = 0;
+    }
+    count[k]++;
+    localStorage.setItem((1000+k), count[k]);
+    document.getElementById(where).innerHTML = count[k];
+}
+
    function deleteKom(pom,kade) {
-     console.log("vlagam da brisam");
      var element=document.getElementById(pom);
     localStorage.removeItem(element);
     loadKom(kade);
 
    }
-   window.addEventListener("load",deklaracija,false);
+   
    function loadinsta()
    {
-    matrix=localStorage.getItem("matrica");
-    for(var i=0;i<1;i++)
-        if(matrix[i]!=null)
-        {
-          document.getElementById("kade"+i).innerHTML=matrix[i];
+      for(var i=1; i<=2; i++){
+          if(localStorage.getItem(i) != null){
+              for(var j=1; j<=localStorage.getItem(i); j++){
+                  if(localStorage.getItem(("komentar"+i+j)) != null){
+                      var whereStart = "kade" + i;
+                      var markupLoad = localStorage.getItem(("komentar"+i+j));
+                      var markup = document.createElement("LI");
+                      markup.innerHTML = markupLoad;
+                      document.getElementById(whereStart).append(markup);
+                  }
+              }
+              comments[i] = localStorage.getItem(i);
+          }
+      } 
+
+      for(var i=0; i<2; i++){
+        if(localStorage.getItem(i+1000) != null){
+            count[i] = localStorage.getItem(1000+i);
+            var kadeLikes = "like" + i;
+            document.getElementById(kadeLikes).innerHTML = count[i];
         }
+      }
    }
-window.addEventListener("load",loadinsta,false);
 function voting(kade, odkade)
             {
                 var x = document.getElementById(odkade).value;

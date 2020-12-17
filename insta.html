@@ -94,7 +94,7 @@
       </script>
 
     </head>
-    <body>
+    <body onload="loadinsta()">
         <div class="home">
             <h1 class="try">Mihaela's Journey</h1>
             <div class="menu"> 
@@ -152,46 +152,38 @@
             <div class="forma" style="width:10cm; height: auto; box-shadow: black;padding:5%;margin: 2%; " >
                <img  name="prva" onmouseover="load2('prva','./img/kokteli.png')" onmouseout="load1('prva','./img/bday.jpg')" ondblclick="funk('like1',0)" src="./img/bday.jpg" alt="profilna" style="height: 8cm; width: 5cm;padding: 0%;margin-left: 0%;">
                <div style="width: 8cm;margin-left: 0%;">
-                  <button type="button" style="width: 1.5cm;height: 1.5cm;" class="contact" onclick="funk('like1',0)">
+                  <button type="button" style="width: 1.5cm;height: 1.5cm;" class="contact" onclick="funk('like0',0)">
                    <img src="./img/blacklike.png" style="width: 1cm;height: 1cm;" alt="like">
                   </button>
-                  <span id="like1">0</span>
+                  <span id="like0"></span>
                </div>
                <details style=" width: 8cm;margin-left: 0%; padding: 0%;overflow: hidden;align-content: center;">
                    <summary style="width: 10cm; overflow: hidden;">All comments:</summary>
-                   <ul id="kade0"></ul>
+                   <ul id="kade1"></ul>
               
                 </details>
                <div>
                   <input id="kom1" style="height:0.5cm;width:8cm;float: left;"required type="text" name="name" placeholder="Comment:" autocomplete="anonymous">
-                  <button class="instabtn" style="float: left; overflow: hidden;"  type="button" onclick="loadKom('kade0','kom1',0)">Post</button>  
+                  <button class="instabtn" style="float: left; overflow: hidden;"  type="button" onclick="loadKom('kade1','kom1', 1)">Post</button>  
         
               </div>
               </div>
               <div class="forma" style="overflow: hidden;height:auto;width:10cm;margin: 2%; box-shadow: black; padding:5%" >
                 <img  name="vtora" onmouseover="load2('vtora','./img/matka.jpg')" onmouseout="load1('vtora','./img/kayaking.jpg')" src="./img/kayaking.jpg" alt="profilna" style="height: 8cm; width: 5cm;">
                 <div style="width: 8cm;margin-left: 0%;">
-                    <button type="button" style="width: 1.5cm;height: 1.5cm;" class="contact" onclick="funk('like2',1)">
+                    <button type="button" style="width: 1.5cm;height: 1.5cm;" class="contact" onclick="funk('like1',1)">
                      <img src="./img/blacklike.png" style="width: 1cm;height: 1cm;" alt="like">
                     </button>
-                    <span id="like2">0</span>
+                    <span id="like1"></span>
                  </div>
                 <details style="width: 8cm;margin-left: 0%; padding: 0%;">
                     <summary style="width: 8cm;">All comments:</summary>
-                     <ul id="vtoralista">
-                        <li id="prv2">Ana Ankovska: Me too!<br>
-                            <button style="border:none; background-color:black; color:white" onclick="deleteKom('prv2','vtoralista')">Delete</button>
-                        </li>
-                        <li id="vtor2">Kiro Krstevski: The best photographer is me<br>
-                            <button style="border:none; background-color:black; color:white" onclick="izbrisi('vtor2')">Delete</button>
-                        </li>
-    
-                    </ul>
+                     <ul id="kade2"></ul>
               
                 </details>
                 <div>
                     <input id="kom2" style="height:0.5cm;width:8cm;float: left;"required type="text" name="name" placeholder="Comment:" autocomplete="anonymous">
-                    <button class="instabtn" style="float: left; overflow: hidden;"  type="button" onclick="comment('vtoralista','kom2','ime2')">Post</button>  
+                    <button class="instabtn" style="float: left; overflow: hidden;"  type="button" onclick="loadKom('kade2', 'kom2', 2)">Post</button>  
           
                 </div>
        
