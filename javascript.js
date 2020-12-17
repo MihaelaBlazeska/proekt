@@ -43,10 +43,17 @@ function generatePopup() {
   const titleContainer = document.createElement('div');
   titleContainer.classList.add('title');
   const title = document.createElement('h2');
-  title.textContent = "Thank you for leaving your feedback";
+  title.textContent = "Thank you for leaving your feedback!";
   titleContainer.appendChild(title);
   popupContainer.appendChild(title);
-  
+  const buttonContainer=document.createElement('a');
+  button=document.createTextNode("Continue");
+  buttonContainer.appendChild(button);
+  buttonContainer.setAttribute("style","float:right");
+  buttonContainer.setAttribute("href","insta.html");
+  buttonContainer.setAttribute("style","padding-left:80%;padding-bottom:5%");
+  popupContainer.appendChild(buttonContainer);
+  popupContainer.setAttribute("style","align-content:center;font-size: 1.125em;font-weight: bold;")
   document.body.appendChild(popupContainer);
 }
 clicked=0
@@ -54,36 +61,79 @@ function dark()
 { 
  
   if(clicked==0)               
-   {document.body.setAttribute( "style", 
-      "background-color:  rgb(88, 85, 85)" ); 
-      clicked=1;  }
+   {document.body.setAttribute( "style", "background-color:  rgb(88, 85, 85)" );
+      clicked=1;  
+    }
   else
   {document.body.setAttribute( "style", 
   "background-color: white" );
   clicked=0;  }
 
-} 
-$(document).ready(function(){
-  $("li").on("click", function(){
-    $(this).hide();
-  });
-});
-$(document).ready(function(){
-  $("#butsub").click(function(){
-    $("#bod").css("color", "red").slideUp(2000).slideDown(2000);
-  });
-});
+}
+
+var count = [];
+var n;
+function funk(kade, n){
+  if(count[n] == null){
+    count[n] = 0;
+  }
+  count[n]++;
+  document.getElementById(kade).innerHTML = count[n]; 
+}
 
 
+function myFunction(kade,naslov,text) {
+  var currentTime = new Date ( );
+  var x = document.getElementById(text).value;
+  var y=document.getElementById(naslov).value;
+  if(text=="textareat" || text=="textareat2")
+  var content="<p style='color:teal; font-size: larger;font-weight: bolder; padding-left: 5%;'>"+y+"</p><p style='color: white;font-size: larger;padding-left: 5%;'>"+x+"</p>";
+  else
+  var content="<p style='color:teal; font-size: larger;font-weight: bolder; padding-left: 5%;'>"+y+"</p><p style='color: black;font-size: larger;padding-left: 5%;'>"+x+"</p>";
+  document.getElementById(kade).innerHTML = content+"<p style='color:teal; padding-left: 5%;'>"+currentTime.getDate ( )+"-"+(currentTime.getMonth ()+1) +"-"+currentTime.getFullYear ( )+"<\p>";
+}
 
+var myWindow;
+  function openwin(koj) {
+  myWindow = window.open(koj,"My window", "width=400, height=200");
+  myWindow.focus();
+   }
+  
+   
+ 
+   function loadKom(kade) {
+       if (!window.sessionStorage.getItem("herePreviously")) {
+           sessionStorage.setItem("herePreviously", "true");
+       }
+       var pom=0;
+       var lenght = localStorage.length;
+       com = [];
+       for (var i = 0; i < lenght; ++i) {
+           com[i] = localStorage.key(i);
+       }
+       var markup = "<ul>";
+       for (var c in com) {
+           var query = localStorage.getItem(com[c]);
+           markup += "<li id='"+pom+"'>"+ query  +"</li>";
+              // "<br><input id = '" + com[c] +
+               // "'type = 'button' class='del'" +
+              // "value = 'Delete' style='border:none; background-color:black; color: white' onclick='izbrisi('"+pom+"')'>
+              
+               pom++;
+       } //end for
+       markup += "</ul>";
+       document.getElementById(kade).innerHTML = markup;
+   } // end function
+   function post(kade,sto) {
+       var c = document.getElementById(sto);
+       localStorage.setItem(c.value, username+":"+c.value);
+       c.value = "";
+       loadKom(kade);
+   }
+   function deleteKom(pom,kade) {
+     console.log("vlagam da brisam");
+     var element=document.getElementById(pom);
+    localStorage.removeItem(element);
+    loadKom(kade);
 
-document.body.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') {
-        document.querySelectorAll('.popup').forEach(popup => popup.remove());
-    }
-}, false);
-
-
-
-
-
+   }

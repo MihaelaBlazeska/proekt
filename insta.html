@@ -6,15 +6,7 @@
         <link rel="stylesheet" type="text/css" href="stylep.css">
         <script src="javascript.js"></script>
         <script type="text/javascript">
-        count = [];
-    
-            function funk(kade, n){
-            if(count[n] == null)
-             {count[n] = 0;}
-             count[n]++;
-             document.getElementById(kade).innerHTML = count[n]; }
-        </script>
-        <script type="text/javascript">
+         var username=window.prompt("Your username");
          var br=[];
          var n;
             function comment(kade,text,ime) {
@@ -25,11 +17,12 @@
                 var node = document.createTextNode(y+" : "+x);
                 para.appendChild(node);
 
+
                 var element = document.getElementById(kade);
                 element.appendChild(para);
 
             };
-            var count=0;
+            var c=0;
                 function rply(kade,text,ime) {
                 var para = document.createElement("li");
                 var x = document.getElementById(text).value;
@@ -39,10 +32,10 @@
                 var but1=document.createElement("button");
                 var node2=document.createTextNode("Delete");
                 but1.appendChild(node2);
-                but1.addEventListener("onclick","izbrisi(count)")
+                but1.addEventListener("onclick","izbrisi(c)")
                 para.appendChild(but1);
-                para.className(count);
-                count++;
+                para.className(c);
+                c++;
 
                 var element = document.getElementById(kade);
                 element.appendChild(para).setAttribute("style","margin-left:10%");
@@ -51,7 +44,7 @@
         </script> 
         <script>
             var loadFile = function(event) {
-                var content= "<div class='forma' style='margin:2%;overflow: hidden;height:13cm;width:10cm; box-shadow: black; padding:5%'>"+
+                var content= "<div class='forma' style='margin:2%;overflow: hidden;height:auto;width:10cm; box-shadow: black; padding:5%'>"+
                             "<p><img id='output' style='height:8cm ; width:5cm ; margin-left:0%;'></p><div style='width: 8cm;margin-left: 0%;'>"+
                             "<button type='button' style='width: 1.5cm;height: 1.5cm;' class='contact' onclick='funk('like3',2)'>"+
                             " <img src='blacklike.png' style='width: 1cm;height: 1cm;' alt='like'> </button>"+
@@ -60,7 +53,6 @@
                             "<summary style='width: 8cm;'>All comments:</summary>"+
                             "<ul><li id='tri'></li> </ul></details>"+ 
                             "<div>"+
-                           " <input id='ime3' style='height:0.35cm;width:4cm;float: left;'required type='text' name='name' placeholder='Name:'>"+
                            " <input id='kom3' style='height:0.5cm;width:8cm;float: left;'required type='text' name='name' placeholder='Comment:'>"+
                            "<button class='instabtn' style='float: left; overflow: hidden;' type='button' onclick='comment('tri','kom3','ime3',2)'>Post</button> "+ 
                            "</div></div>";
@@ -76,19 +68,28 @@
                 function load2(kade,koja) {
                document[kade].src = koja
                                    }
-                function izbrisi(kade)
-                {
-                    var elmnt = document.getElementById(kade);
-                    elmnt.remove();
-                }
+                    
          </script>
          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
          <script>
-        /* $(document).ready(function(){
-            $("li").on("click", function(){
+         function izbrisi(kade){
+            element= document.getElementById(kade);
+            localStorage.removeItem(element);
+           loadKom(kade);
+         }
+
+
+
+        $(document).ready(function(){
+            $(".del").on("click", function(){
               $(this).hide();
             });
-          });*/
+          });
+       /*$(document).ready(function(){
+            $(".del").on("click", function(){
+                $(this).hide();
+            });
+        });*/
           
       </script>
 
@@ -148,7 +149,7 @@
             
         </div> 
         <div style="padding-left:30%">
-            <div class="forma" style="height:13cm;width:10cm; box-shadow: black;padding:5%;margin: 2%; " >
+            <div class="forma" style="width:10cm; height: auto; box-shadow: black;padding:5%;margin: 2%; " >
                <img  name="prva" onmouseover="load2('prva','kokteli.png')" onmouseout="load1('prva','bday.jpg')" ondblclick="funk('like1',0)" src="bday.jpg" alt="profilna" style="height: 8cm; width: 5cm;padding: 0%;margin-left: 0%;">
                <div style="width: 8cm;margin-left: 0%;">
                   <button type="button" style="width: 1.5cm;height: 1.5cm;" class="contact" onclick="funk('like1',0)">
@@ -158,29 +159,16 @@
                </div>
                <details style=" width: 8cm;margin-left: 0%; padding: 0%;overflow: hidden;align-content: center;">
                    <summary style="width: 10cm; overflow: hidden;">All comments:</summary>
-                   <ul id="prvalista" >
-                       <li id="prv1">Ana Ankovska: Happpy birthday!!!<br>
-                           <button style="border:none; background-color:black; color:white" onclick="izbrisi('prv1')">Delete</button>
-                           
-                        </li>
-                       <li id="vtor1">Kiro Krstevski: Be happiest!<br>
-                        <button style="border:none; background-color:black; color:white" onclick="izbrisi('vtor1')">Delete</button>
-                        <!--<button style="border:none; background-color:black; color:white" onclick="rply('vtor1','kom1','ime1')">Reply</button>-->
-                       </li>
-                       
-                       
-
-                   </ul>
+                   <div id="prvalista"></div>
               
                 </details>
                <div>
-                  <input id="ime1" style="height:0.35cm;width:4cm;float: left;"required type="text" name="name" placeholder="Name:" autocomplete="anonymous">
                   <input id="kom1" style="height:0.5cm;width:8cm;float: left;"required type="text" name="name" placeholder="Comment:" autocomplete="anonymous">
-                  <button class="instabtn" style="float: left; overflow: hidden;"  type="button" onclick="comment('prvalista','kom1','ime1')">Post</button>  
+                  <button class="instabtn" style="float: left; overflow: hidden;"  type="button" onclick="post('prvalista','kom1')">Post</button>  
         
               </div>
               </div>
-              <div class="forma" style="overflow: hidden;height:13cm;width:10cm;margin: 2%; box-shadow: black; padding:5%" >
+              <div class="forma" style="overflow: hidden;height:auto;width:10cm;margin: 2%; box-shadow: black; padding:5%" >
                 <img  name="vtora" onmouseover="load2('vtora','matka.jpg')" onmouseout="load1('vtora','kayaking.jpg')" src="kayaking.jpg" alt="profilna" style="height: 8cm; width: 5cm;">
                 <div style="width: 8cm;margin-left: 0%;">
                     <button type="button" style="width: 1.5cm;height: 1.5cm;" class="contact" onclick="funk('like2',1)">
@@ -192,7 +180,7 @@
                     <summary style="width: 8cm;">All comments:</summary>
                      <ul id="vtoralista">
                         <li id="prv2">Ana Ankovska: Me too!<br>
-                            <button style="border:none; background-color:black; color:white" onclick="izbrisi('prv2')">Delete</button>
+                            <button style="border:none; background-color:black; color:white" onclick="deleteKom('prv2','vtoralista')">Delete</button>
                         </li>
                         <li id="vtor2">Kiro Krstevski: The best photographer is me<br>
                             <button style="border:none; background-color:black; color:white" onclick="izbrisi('vtor2')">Delete</button>
@@ -202,7 +190,6 @@
               
                 </details>
                 <div>
-                    <input id="ime2" style="height:0.35cm;width:4cm;float: left;"required type="text" name="name" placeholder="Name:" autocomplete="anonymous">
                     <input id="kom2" style="height:0.5cm;width:8cm;float: left;"required type="text" name="name" placeholder="Comment:" autocomplete="anonymous">
                     <button class="instabtn" style="float: left; overflow: hidden;"  type="button" onclick="comment('vtoralista','kom2','ime2')">Post</button>  
           

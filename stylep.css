@@ -458,4 +458,5 @@ details
     border-radius: 40px;
     background: linear-gradient(var(--gradeint-angle), var(--green), var(--purple));
     transition: transform 300ms ease-in-out;
+    
 }

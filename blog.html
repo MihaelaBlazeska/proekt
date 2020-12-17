@@ -4,31 +4,19 @@
         <meta charset="utf-8">
         <title>Blog</title>
         <link rel="stylesheet" type="text/css" href="stylep.css">
-        <script src="javascript.js"></script>
-        <script type="text/javascript">
-            function myFunction(kade,naslov,text) {
-              var currentTime = new Date ( );
-              var x = document.getElementById(text).value;
-              var y=document.getElementById(naslov).value;
-              if(text=="textareat" || text=="textareat2")
-              var content="<p style='color:teal; font-size: larger;font-weight: bolder; padding-left: 5%;'>"+y+"</p><p style='color: white;font-size: larger;padding-left: 5%;'>"+x+"</p>";
-              else
-              var content="<p style='color:teal; font-size: larger;font-weight: bolder; padding-left: 5%;'>"+y+"</p><p style='color: black;font-size: larger;padding-left: 5%;'>"+x+"</p>";
-              document.getElementById(kade).innerHTML = content+"<p style='color:teal; padding-left: 5%;'>"+currentTime.getDate ( )+"-"+(currentTime.getMonth ()+1) +"-"+currentTime.getFullYear ( )+"<\p>";
-            }
-        </script> 
+        <script src="javascript.js"></script> 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script> 
             var pom=0
             $(document).ready(function(){
             
-                $(this).click(function(){
+                $("#flip").click(function(){
             
                 if(pom==0){
-                $(this).find(".panel1").slideDown("slow");
+                $("#flip").find(".panel1").slideDown("slow");
                 pom=1;}
                 else
-                {$(this).find(".panel1").slideUp("slow");
+                {$("#flip").find(".panel1").slideUp("slow");
                 pom=0;}
                 });
             
@@ -84,7 +72,7 @@
                     The modest wear category it adds will offer “something suited for everyone” from
                      classic everyday staples to special occasion pieces with a range of dresses featuring
                      maxi lengths to long-sleeve designs.
-                     <a href="https://fashionunited.uk/news/fashion/prettylittlething-launches-first-modest-edit/2020102251507">read more</a>
+                     <a onclick="openwin('https://fashionunited.uk/news/fashion/prettylittlething-launches-first-modest-edit/2020102251507')">read more</a>
                      <p style="color:teal; padding-left: 5%;">5-10-2020</p>
                 </p>
                </div>
@@ -101,7 +89,7 @@
                      in which they can be sure it only includes brands that actually sell to stores in wholesale. As an online marketplace,
                       FashionUnited understands the competitive nature of fashion buying 
                     and ensures importance is put on trend spotting and being constantly on the lookout for new brands and designers.
-                    <a href="https://fashionunited.com/news/business/designer-face-masks-wholesale-marketplace/2020102636099">read more</a>
+                    <a onclick="openwin('https://fashionunited.com/news/business/designer-face-masks-wholesale-marketplace/2020102636099')">read more</a>
                 </p>
                 <p style="color:teal; padding-left: 5%;">1-11-2020</p>
                </div>
@@ -152,8 +140,12 @@
                                </div>
 
                         </li>
-                        <li class="panel1" style="padding-left:25%"><div style=" overflow:hidden"; id="novpostt"></div></li>
-                        <li class="panel1" style="text-align: left;padding-left: 5%;">
+                        <li class="panel1" id="novpostt" style="padding-left: 20%;">
+
+                        </li>
+                    </ul>
+                        
+                    <div  style="text-align: left;padding-left: 5%;">
                             <p style="color:teal; font-size: larger;font-weight: bolder;">
                                Do you want to share you story?
                              </p>
@@ -162,9 +154,9 @@
                             <p  style="font-size: larger;font-weight: bolder;">Content</p>
                             <textarea placeholder="Your Blog here:" id="textareat" style=" width: 70%;"></textarea>
                             <button class="blogbtn" type="button" onclick="myFunction('novpostt','naslovt','textareat')">Post</button>
-                        </li>
+                    </div>
 
-                    </ul>
+                   
                
              
              
@@ -180,7 +172,7 @@
 
               The global value of the sports industry is estima­ted at US$756 billion annually. In the face of COVID-19, many millions of jobs are therefore at risk globally, not only for sports professionals but also for those in related retail and sporting services industries connected with leagues and events, which include travel, tourism, infrastructure, transportation, catering and media broadcasting, among others. Professional athletes are also under pressure to reschedule their training,
               while trying to stay fit at home, and they risk losing professional sponsors who may not support them as initially agreed.
-              <a href="https://www.un.org/development/desa/dspd/2020/05/covid-19-sport/">read more</a>   
+              <a onclick="openwin('https://www.un.org/development/desa/dspd/2020/05/covid-19-sport/')">read more</a>   
                 </p>
                 <p style="color:teal; padding-left: 5%;">1-9-2020</p>
                </div>

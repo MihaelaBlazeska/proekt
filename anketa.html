@@ -32,10 +32,11 @@
         <div id="clock" style="float: right; color: grey; font-weight: bolder;text-align: center; font-size: 120%;"></div>
 
     </div>
-   <section style="padding-left: 2%; padding-right: 2%;  margin-top: 2%;">
-     <form method="post" action="personalblog.html" autocomplete="on" class="forma" >
+    <div id="tuka"></div>
+    <section  style="padding-left: 2%; padding-right: 2%;  margin-top: 2%;">
+     <div autocomplete="on" class="forma" >
        <section class="anketaprozor" >
-       </div id="bod">
+       <div id="bod">
          <p class="anketa" style="background-color: white;">Your name:* <br>
             <input required type="text" name="name" placeholder="Name" autofocus autocomplete="anonymous" required>
          </p>
@@ -85,25 +86,14 @@
             Date:<br>
             <input type="datetime-local">
             <section>
-                <li class="nav-item">
-                    <a href="#signin" id="sign-in"  onclick="generatePopup()" >Submit</a>
-                </li>
-                <input name="Clear" type="reset">
+              <a href="#tuka"><button  onclick="generatePopup()">Submit</button></a> 
+               <input name="Clear" type="reset">
             </section>
          </p>
         </section>
-      </form>
-     
+    </div>     
      </section>
-     <div class="cover hidden" id="cover">
-        <div class="form-container hidden" id="sign-in-form">
-            <form action="my_profile.html" method="post">
-                <h1>Thank you for your feedback</h1>
-                <button type="submit" style="margin-top: 20px; margin-bottom: 2rem;"class="btn gradient-btn">Continue</button>
-            </form>
-        </div>
-    </div>
-    <div id="tuka"></div>
+    
 
    <div id="Contact" style="background-color: black;height:5cm;" class="insta">
         <div>
